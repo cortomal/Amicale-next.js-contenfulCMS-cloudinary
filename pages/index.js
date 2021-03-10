@@ -21,7 +21,7 @@ export default function App({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      
-        <div className=" h-screen">
+        <div className="LibreBaskerville h-screen">
           <div className="flex content-center items-center mx-auto my-auto text-lg">
             <div>
              

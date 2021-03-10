@@ -1,3 +1,72 @@
+import Head from "next/head";
+import Layout from "../components/Layout";
+import PostList from "../components/PostList";
+import React from "react";
+import ReactPlayer from "react-player";
+import { useState } from "react";
+import Link from "next/link";
+
+export default function Index({ posts }) {
+  posts.sort(function (a, b) {
+    a = new Date(a.fields.date);
+    b = new Date(b.fields.date);
+    return a > b ? -1 : a < b ? 1 : 0;
+  });
+
+  const afficher = () => {
+    return <PostList posts={posts.slice(1, 4)} />;
+  };
+
+  return (
+    <div>
+      <Head>
+        <title>L'Amicale | Evènements à venir </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Layout>
+        <div className="mt-20 LibreBaskerville">
+          <PostList posts={posts.slice(0, 10)} />
+
+          {/* <button onClick={()=>afficher()}>
+            Voir plus
+          </button> */}
+
+          <div className="flex justify-center mt-6 mb-6">
+            <Link className="" href="/evenementsPasses">
+              <a className="border rounded-full py-3 px-6 border-black">
+                Voir les anciens évènements
+              </a>
+            </Link>
+          </div>
+        </div>
+      </Layout>
+    </div>
+  );
+}
+
+export async function getStaticProps() {
+  // Create an instance of the Contentful JavaScript SDK
+  const client = require("contentful").createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  // Fetch all entries of content_type `blogPost`
+  const posts = await client
+    .getEntries({ content_type: "article" })
+    .then((response) => response.items);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+
+
+
 // import React, { useState, useEffect } from "react";
 // import Head from "next/head";
 // import Layout from "../components/Layout";
@@ -105,68 +174,3 @@
 //   };
 // }
 
-import Head from "next/head";
-import Layout from "../components/Layout";
-import PostList from "../components/PostList";
-import React from "react";
-import ReactPlayer from "react-player";
-import { useState } from "react";
-import Link from "next/link";
-
-export default function Index({ posts }) {
-  posts.sort(function (a, b) {
-    a = new Date(a.fields.date);
-    b = new Date(b.fields.date);
-    return a > b ? -1 : a < b ? 1 : 0;
-  });
-
-  const afficher = () => {
-    return <PostList posts={posts.slice(1, 4)} />;
-  };
-
-  return (
-    <div>
-      <Head>
-        <title>L'Amicale | Evènements à venir </title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Layout>
-        <div className="mt-20 LibreBaskerville">
-          <PostList posts={posts.slice(0, 10)} />
-
-          {/* <button onClick={()=>afficher()}>
-            Voir plus
-          </button> */}
-
-          <div className="flex justify-center mt-6 mb-6">
-            <Link className="" href="/evenementsPasses">
-              <a className="border rounded-full py-3 px-6 border-black">
-                Voir les anciens évènements
-              </a>
-            </Link>
-          </div>
-        </div>
-      </Layout>
-    </div>
-  );
-}
-
-export async function getStaticProps() {
-  // Create an instance of the Contentful JavaScript SDK
-  const client = require("contentful").createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
-
-  // Fetch all entries of content_type `blogPost`
-  const posts = await client
-    .getEntries({ content_type: "article" })
-    .then((response) => response.items);
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}
