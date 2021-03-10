@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "LibreBaskerville";
+  src: local("/public/fonts/LibreBaskerville-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ARK-ES-DenseRegular";
+  src: local("public/fonts/ARK-ES-DenseRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+.LibreBaskerville{
+  font-family:'LibreBaskerville'
+}
+
+.arkm{
+  font-family:'ARK-ES-DenseRegular'
+}
+
+
+
+
+
 /* html,
 body {
   padding: 0;
@@ -18,3 +48,4 @@ a {
 * {
   box-sizing: border-box;
 } */
+

@@ -1,27 +1,36 @@
-import React from "react"
-import Link from "next/link"
+import React from "react";
 
 export default function PostList({ posts = [] }) {
+  
+
+  posts.sort(function (a, b) {
+    a = new Date(a.fields.date);
+    b = new Date(b.fields.date);
+    return a > b ? -1 : a < b ? 1 : 0;
+  });
   return (
-    <section>
-      {posts.map((post) => (
-        <article key={post.sys.id}>
-          <header>
-            <h1>
-              <Link href={`/post/${post.fields.slug}`}>
-                <a>{post.fields.title}</a>
-              </Link>
-            </h1>
-            <small>
-              <p>Le: {Date(post.fields.date).toString()}</p>
-            </small>
-          </header>
-          <p>{post.fields.description}</p>
+    <div>
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4 px-6 LibreBaskerville">
+        {posts.map((post) => (
+          <div key={post.sys.id}>
+            <a href={`/post/${post.fields.slug}`}>
+              <img
+                src={post.fields.imageCloudinary[0].secure_url}
+                width="100%"
+                height="auto"
+              />
 
+              <h1 className="font-semibold text-center">
+                <div>{post.fields.title}</div>
+              </h1>
 
-        </article>
-      ))}
+              {/* <p>Le: {Date(post.fields.date).toString()}</p> */}
 
-    </section>
-  )
+              <p>{post.fields.description}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

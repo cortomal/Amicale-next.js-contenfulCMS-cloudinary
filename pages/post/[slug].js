@@ -7,7 +7,7 @@ export default function Slug({ post }) {
   return (
     <Layout>
       <Head>
-        <title>{post.fields.title} — My Next.js Static Blog</title>
+        <title>{post.fields.title} — L'Amicale</title>
       </Head>
       <Post post={post} />
     </Layout>
