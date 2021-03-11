@@ -12,7 +12,7 @@ export default function Contact() {
 
       <body className="flex justify-center content-center h-screen">
         <div className="mx-auto my-auto text-lg">
-          amicanedufutur [at] riseup.net
+          amicaledufutur [at] riseup.net
         </div>
       </body>
     </Layout>
