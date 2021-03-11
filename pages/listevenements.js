@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import PostList from "../components/PostList";
 import React from "react";
 import Link from "next/link";
+import Markdown from "react-markdown";
 
 export default function Index({ posts }) {
   posts.sort(function (a, b) {
@@ -10,7 +11,7 @@ export default function Index({ posts }) {
     b = new Date(b.fields.date);
     return a > b ? -1 : a < b ? 1 : 0;
   });
-
+  console.log(posts);
   return (
     <div>
       <Head>
@@ -19,7 +20,33 @@ export default function Index({ posts }) {
       </Head>
 
       <Layout>
-        <body className="mt-20 LibreBaskerville">
+        <div className="mt-10 grid grid-cols-3">
+          <div className="border-r border-black">
+            <div className="ml-6 pl-3 pr-3">
+            <p>Le: {Date(posts[0].fields.date).toString()}</p>
+              <img
+                src={posts[0].fields.imageCloudinary[0].secure_url}
+                height="auto"
+                width="100%"
+              />
+              <h1 className="font-semibold text-xl text-center mt-3 mb-6 ">
+                {posts[0].fields.title}
+              </h1>
+              {/* <p>Horaires: {Date(post.fields.date).toString()}</p> */}
+              <Markdown source={posts[0].fields.body} escapeHtml={true} className=''/>
+            </div>
+          </div>
+          <div>
+            <PostList posts={posts.slice(1, 10)} />
+          </div>
+          <div className="mr-6 text-center arkm">
+          <Link href="/bizarrebazar">
+            <a className="text-5xl ">Bizarre Bazar</a>
+          </Link>
+        </div>
+        </div>
+
+        {/* <div className=" px-6 mt-20 LibreBaskerville">
           <PostList posts={posts.slice(0, 10)} />
           <div className="flex justify-center mt-6 mb-6">
             <Link className="" href="/evenementsPasses">
@@ -28,7 +55,7 @@ export default function Index({ posts }) {
               </a>
             </Link>
           </div>
-        </body>
+          </div> */}
       </Layout>
     </div>
   );
@@ -52,9 +79,6 @@ export async function getStaticProps() {
     },
   };
 }
-
-
-
 
 // import React, { useState, useEffect } from "react";
 // import Head from "next/head";
@@ -162,4 +186,3 @@ export async function getStaticProps() {
 //     },
 //   };
 // }
-

@@ -1,26 +1,106 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-
+import Head from "next/head";
+import Layout from "../components/Layout";
+import Markdown from "react-markdown";
 
 export default function Home({ artistes = [] }) {
-
-console.log(artistes[0].fields);
-    return (
-    <div className={styles.container}>
+  console.log(artistes[0].fields);
+  return (
+    <div className="h-screen bg-gray-50">
       <Head>
         <title>L'Amicale | Bizarre Bazar</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://app.snipcart.com"></link>
         <link rel="preconnect" href="https://cdn.snipcart.com"></link>
-        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css" />
-        <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
-        <div id="snipcart" data-config-modal-style="side" data-api-key={process.env.SNIPCART_DATA_API_KEY} hidden></div>
+        <link
+          rel="stylesheet"
+          href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css"
+        />
+        <script
+          async
+          src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"
+        ></script>
+        <div
+          id="snipcart"
+          data-config-modal-style="side"
+          data-api-key={process.env.SNIPCART_DATA_API_KEY}
+          hidden
+        ></div>
       </Head>
-        
-     <div>
-          <div>
-              {artistes.map((artiste)=>(
+      <Layout>
+        <div>
+          <div className="text-9xl px-6 mt-6 arkm">BIZARRE BAZAR</div>
+          <div className="px-6 mt-20 LibreBaskerville">
+            
+
+            {artistes.map((artiste) => (
+              <div className="border-t border-black">
+                <div>{artiste.fields.nomDeLartiste}</div>
+                <a href={artiste.fields.siteDeLarticle} className="hover:text-red-600" target="_blank">
+                  {artiste.fields.siteDeLarticle}
+                </a>
+
+                <div className="grid gap-6 grid-cols-3">
+                  <div>
+                    <img
+                      src={artiste.fields.illustrationOeuvre1[0].url}
+                      width="400vw"
+                      height="auto"
+                    />
+                    <p>{artiste.fields.oeuvre1}</p>
+                    <Markdown
+                      source={artiste.fields.descriptionOeuvre1}
+                      escapeHtml={true}
+                    />
+                    <p>{artiste.fields.prix1} euros</p>
+
+                    <button
+                      class="snipcart-add-item"
+                      data-item-id={artiste.fields.oeuvre1}
+                      data-item-price={artiste.fields.prix1}
+                      data-item-url="/bizarrebazar"
+                      // data-item-description=""
+                      data-item-name={artiste.fields.oeuvre1}
+                    >
+                      Ajouter au panier
+                    </button>
+                  </div>
+
+                  <div>
+                    <div>
+                      <img
+                        src={artiste.fields.illustrationOeuvre2[0].url}
+                        width="400vw"
+                        height="auto"
+                      />
+                      <p>{artiste.fields.oeuvre2}</p>
+                      <Markdown
+                        source={artiste.fields.descriptionOeuvre2}
+                        escapeHtml={true}
+                      />
+                      <p>{artiste.fields.prixOeuvre2} euros</p>
+
+                      <button
+                        class="snipcart-add-item"
+                        data-item-id={artiste.fields.oeuvre2}
+                        data-item-price={artiste.fields.prixOeuvre2}
+                        data-item-url="/bizarrebazar"
+                        // data-item-description=""
+                        data-item-name={artiste.fields.oeuvre2}
+                      >
+                        Ajouter au panier
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Layout>
+
+      <div>
+        <div>
+          {/* {artistes.map((artiste)=>(
                 <div key={artiste.sys.id}>
                     <h2>
                         <div>{artiste.fields.nomDeLartiste}</div>
@@ -41,19 +121,13 @@ console.log(artistes[0].fields);
                     <p>{artiste.fields.prixOeuvre2}</p>
                 
                 </div>
-
               ))
-              
-
-              }
-          </div>
-    </div> 
+              } */}
+        </div>
+      </div>
 
       {/* <main className={styles.main}>
 
-        <h2>
-          Achetons l'amicale
-        </h2>
        <button class="snipcart-add-item"
           data-item-id="Local de fou"
           data-item-price="230000"
@@ -63,36 +137,27 @@ console.log(artistes[0].fields);
           Ajouter au panier
         </button>
         <button class="snipcart-checkout">Passer la commande</button>
-  </main> */}
-
-
-
-
-
-      <footer className={styles.footer}>
   
-          Powered by Télécrans de derrière les fagots
-         
-      </footer>
+  */}
     </div>
-  )
+  );
 }
 
 export async function getStaticProps() {
-    // Create an instance of the Contentful JavaScript SDK
-    const client = require("contentful").createClient({
-      space: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    });
-  
-    // Fetch all entries of content_type `blogPost`
-    const artistes = await client
-      .getEntries({ content_type: "artiste" })
-      .then((response) => response.items);
-  
-    return {
-      props: {
-        artistes,
-      },
-    };
-  }
+  // Create an instance of the Contentful JavaScript SDK
+  const client = require("contentful").createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  // Fetch all entries of content_type `blogPost`
+  const artistes = await client
+    .getEntries({ content_type: "artiste" })
+    .then((response) => response.items);
+
+  return {
+    props: {
+      artistes,
+    },
+  };
+}
