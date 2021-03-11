@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="preconnect" href="https://cdn.snipcart.com"></link>
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css" />
         <script async src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"></script>
-        <div id="snipcart" data-config-modal-style="side" data-api-key="ZWM2MTY0MjYtZjI3NS00MDM3LTkzNjQtMTljMjA2N2U2ZGM2NjM3NTAyODk3NTI4MDExNjAx" hidden></div>
+        <div id="snipcart" data-config-modal-style="side" data-api-key={process.env.SNIPCART_DATA_API_KEY} hidden></div>
       </Head>
 
       <main className={styles.main}>
