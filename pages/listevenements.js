@@ -2,8 +2,6 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import PostList from "../components/PostList";
 import React from "react";
-import ReactPlayer from "react-player";
-import { useState } from "react";
 import Link from "next/link";
 
 export default function Index({ posts }) {
@@ -13,10 +11,6 @@ export default function Index({ posts }) {
     return a > b ? -1 : a < b ? 1 : 0;
   });
 
-  const afficher = () => {
-    return <PostList posts={posts.slice(1, 4)} />;
-  };
-
   return (
     <div>
       <Head>
@@ -25,13 +19,8 @@ export default function Index({ posts }) {
       </Head>
 
       <Layout>
-        <div className="mt-20 LibreBaskerville">
+        <body className="mt-20 LibreBaskerville">
           <PostList posts={posts.slice(0, 10)} />
-
-          {/* <button onClick={()=>afficher()}>
-            Voir plus
-          </button> */}
-
           <div className="flex justify-center mt-6 mb-6">
             <Link className="" href="/evenementsPasses">
               <a className="border rounded-full py-3 px-6 border-black">
@@ -39,7 +28,7 @@ export default function Index({ posts }) {
               </a>
             </Link>
           </div>
-        </div>
+        </body>
       </Layout>
     </div>
   );

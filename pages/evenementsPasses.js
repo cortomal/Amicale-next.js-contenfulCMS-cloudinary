@@ -16,23 +16,14 @@ export default function EvenementsPasses({ posts }) {
   return (
     <div>
       <Head>
-        <title>L'Amicale | Bienvenue </title>
+        <title>L'Amicale | Anciens évènements </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
-        <div className="mt-20 LibreBaskerville">
-        
+        <body className="mt-20 LibreBaskerville">
           <PostList posts={posts.slice(0,posts.length)} />
-        
-          {/* <button onClick={()=>afficher()}>
-            Voir plus
-          </button> */}
-       
-
-
-
-        </div>
+        </body>
       </Layout>
     </div>
   );

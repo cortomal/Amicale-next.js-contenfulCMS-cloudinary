@@ -9,12 +9,12 @@ export default function Contact() {
         <title>L'Amicale | Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<div className="flex justify-center content-center h-screen">
-     <div className="mx-auto my-auto text-lg">
-       amicanedufutur [at] riseup.net
-      </div>
-</div>
-     
+
+      <body className="flex justify-center content-center h-screen">
+        <div className="mx-auto my-auto text-lg">
+          amicanedufutur [at] riseup.net
+        </div>
+      </body>
     </Layout>
   );
 }
