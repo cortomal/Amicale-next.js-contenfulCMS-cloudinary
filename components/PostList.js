@@ -16,7 +16,14 @@ export default function PostList({ posts = [] }) {
           <div className="pl-3 pr-3">
           <div key={post.sys.id}>
             <a href={`/post/${post.fields.slug}`}>
-              <p>Le: {Date(post.fields.date).toString()}</p>
+              <p> {new Date(post.fields.date).toLocaleString('fr-FR',{
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric'})}</p>
               <img
                 src={post.fields.imageCloudinary[0].secure_url}
                 width="100%"

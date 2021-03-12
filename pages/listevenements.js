@@ -23,7 +23,14 @@ export default function Index({ posts }) {
         <div className="mt-10 grid grid-cols-3">
           <div className="border-r border-black">
             <div className="ml-6 pl-3 pr-3">
-            <p>Le: {Date(posts[0].fields.date).toString()}</p>
+            <p> {new Date(posts[0].fields.date).toLocaleString('fr-FR',{
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric'})}</p>
               <img
                 src={posts[0].fields.imageCloudinary[0].secure_url}
                 height="auto"

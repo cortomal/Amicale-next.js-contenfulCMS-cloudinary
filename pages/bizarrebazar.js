@@ -3,7 +3,18 @@ import Layout from "../components/Layout";
 import Markdown from "react-markdown";
 
 export default function Home({ artistes = [] }) {
+  
   console.log(artistes[0].fields);
+
+  function fisherYatesShuffle(arr){
+    for(let i =arr.length-1 ; i>0 ;i--){
+        let j = Math.floor( Math.random() * (i + 1) ); //random index
+        [arr[i],arr[j]]=[arr[j],arr[i]]; // swap
+    }
+}
+
+  fisherYatesShuffle(artistes);
+
   return (
     <div className="h-screen bg-gray-50">
       <Head>
@@ -41,11 +52,12 @@ export default function Home({ artistes = [] }) {
 
                 <div className="grid gap-6 grid-cols-3">
                   <div>
+                     {artiste.fields.illustrationOeuvre1 && 
                     <img
                       src={artiste.fields.illustrationOeuvre1[0].url}
                       width="400vw"
                       height="auto"
-                    />
+                    /> } 
                     <p>{artiste.fields.oeuvre1}</p>
                     <Markdown
                       source={artiste.fields.descriptionOeuvre1}
@@ -54,7 +66,7 @@ export default function Home({ artistes = [] }) {
                     <p>{artiste.fields.prix1} euros</p>
 
                     <button
-                      class="snipcart-add-item"
+                      className="snipcart-add-item"
                       data-item-id={artiste.fields.oeuvre1}
                       data-item-price={artiste.fields.prix1}
                       data-item-url="/bizarrebazar"
@@ -67,11 +79,11 @@ export default function Home({ artistes = [] }) {
 
                   <div>
                     <div>
-                      <img
+                     {artiste.fields.illustrationOeuvre2 && <img
                         src={artiste.fields.illustrationOeuvre2[0].url}
                         width="400vw"
                         height="auto"
-                      />
+                     /> }
                       <p>{artiste.fields.oeuvre2}</p>
                       <Markdown
                         source={artiste.fields.descriptionOeuvre2}
@@ -80,7 +92,7 @@ export default function Home({ artistes = [] }) {
                       <p>{artiste.fields.prixOeuvre2} euros</p>
 
                       <button
-                        class="snipcart-add-item"
+                        className="snipcart-add-item"
                         data-item-id={artiste.fields.oeuvre2}
                         data-item-price={artiste.fields.prixOeuvre2}
                         data-item-url="/bizarrebazar"
