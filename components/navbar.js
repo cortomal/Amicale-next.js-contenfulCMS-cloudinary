@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar({ children }) {
   return (
-    <div className="flex justify-between px-3 pb-3 LibreBaskerville text-lg border-b border-black py-3">
+    <div className="sticky top-0 flex justify-between px-3 pb-3 LibreBaskerville text-lg border-b border-black py-3 bg-white">
       <Link href="/listevenements">
         <a className=' ' >L'Amicale du Futur, 31 rue Sébastien Gryphe Lyon 7e</a>
       </Link>
@@ -21,14 +21,14 @@ export default function Navbar({ children }) {
             <a>Bizarre Bazar</a>
           </Link>
         </div>
-        <div className="mr-6">
+        {/* <div className="mr-6">
           <Link href="/publications">
             <a>Publications</a>
           </Link>
-        </div>
+        </div> */}
         <div className="mr-3">
           <Link href="/cantines">
-            <a>Horaires</a>
+            <a>Horaires/Contact</a>
           </Link>
         </div>
         {/* <div className="mr-6">

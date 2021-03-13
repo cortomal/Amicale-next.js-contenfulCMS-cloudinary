@@ -8,25 +8,16 @@
 @font-face {
   font-family: "LibreBaskerville";
   src: url("/fonts/LibreBaskerville-Regular.ttf");
-  /* font-style: normal;
-  font-weight: 400;
-  font-display: swap; */
 }
 
 @font-face {
   font-family: "ARK-ES-DenseRegular";
   src: url("/fonts/ARK-ES-DenseRegular.woff") format("woff");
-  /* font-style: normal;
-  font-weight: 400;
-  font-display: swap; */
 }
 
 @font-face {
   font-family: "fugue_headline";
   src: url("/fonts/fugue_headline.otf");
-  /* font-style: normal;
-  font-weight: 400;
-  font-display: swap; */
 }
 
 .LibreBaskerville{
@@ -42,6 +33,13 @@
 }
 
 
+
+
 .srollbar-none{
   scrollbar-width: none;
 }
+
+.height-control{
+  height: 94vh;
+}
+

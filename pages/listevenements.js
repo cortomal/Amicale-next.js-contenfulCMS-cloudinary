@@ -6,86 +6,107 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 
 export default function Index({ posts }) {
+
+  const enUne = posts.filter((article) => article.fields.enUne === true);
+
   posts.sort(function (a, b) {
     a = new Date(a.fields.date);
     b = new Date(b.fields.date);
     return a > b ? -1 : a < b ? 1 : 0;
   });
-  console.log(posts);
+
+  
+
   return (
-    <div>
+    <div className="">
       <Head>
         <title>L'Amicale | Evènements à venir </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
-        <div className=" grid grid-cols-3">
+        <div className=" grid grid-cols-3 ">
           <div className="border-r border-black">
+            <di className="flex pl-3 border-b border-black">
+              Evènements à venir
+            </di>
+            <div className="h-screen overflow-scroll srollbar-none overscroll-contain">
+              {enUne.map((une) => (
+                <div className=" pb-3 ml-3 border-b border-black">
+                  <a href={`/post/${une.fields.slug}`}>
+                    <div className="">
+                      <p>
+                        {" "}
+                        {new Date(une.fields.date).toLocaleString("fr-FR", {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                          hour: "numeric",
+                          minute: "numeric",
+                          // second: "numeric",
+                        })}
+                      </p>
+                      <img
+                        src={une.fields.imageCloudinary[0].secure_url}
+                        height="auto"
+                        width="100%"
+                      />
 
-            <div className="h-screen overflow-scroll">
-            <a href={`/post/${posts[0].fields.slug}`}>
-              <div className="ml-3">
-                <p>
-                  {" "}
-                  {new Date(posts[0].fields.date).toLocaleString("fr-FR", {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    hour: "numeric",
-                    minute: "numeric",
-                    second: "numeric",
-                  })}
-                </p>
-                <img
-                  src={posts[0].fields.imageCloudinary[0].secure_url}
-                  height="auto"
-                  width="100%"
-                />
+                      <h1 className="font-semibold text-xl  mt-3 mb-6 ">
+                        {une.fields.title}
+                      </h1>
 
-                <h1 className="font-semibold text-xl  mt-3 mb-6 ">
-                  {posts[0].fields.title}
-                </h1>
-
-                {/* <p>Horaires: {Date(post.fields.date).toString()}</p> */}
-                
-                <Markdown
-                  source={posts[0].fields.description}
-                  escapeHtml={true}
-                />
-{/*                 
+                      <Markdown
+                        source={une.fields.description}
+                        escapeHtml={true}
+                      />
+                      {/*                 
                 <Markdown
                   source={posts[0].fields.body.substr(0, 1500) + "..."}
                   escapeHtml={true}
                 /> */}
-                {/* <p className="underline">Lire plus</p> */}
-              </div>
-            </a>{" "} 
+                      {/* <p className="underline">Lire plus</p> */}
+                    </div>
+                  </a>
+                </div>
+              ))}{" "}
             </div>
           </div>
 
           <div className="grid grid-cols-2">
-            <div className='border-r border-black h-screen overflow-scroll srollbar-none'>
-                <PostList posts={posts.slice(1, 10)} />
+            <div className="border-r border-black h-screen overflow-scroll srollbar-none ">
+              <di className="flex pl-3 border-b border-black bg-white">
+                Evènements passés
+              </di>
+              <PostList posts={posts.slice(1, 10)} />
             </div>
-            <div className='border-r border-black h-screen overflow-scroll srollbar-none' >
-            <PostList posts={posts.slice(2, 10)} />
+            <div className="border-r border-black h-screen overflow-scroll srollbar-none ">
+              {/* <di className="flex pl-3 text-white border-b border-black">
+                Evènements passés
+              </di> */}
+              <PostList posts={posts.slice(2, 10)} />
             </div>
-          
           </div>
+<div className="flex">
 
 
-
-
-
-
-
-          <div className="mr-6 text-center arkm">
-            <Link href="/bizarrebazar">
-              <a className="text-5xl ">Bizarre Bazar</a>
-            </Link>
+          <div className=" justify-center items-center mx-auto my-auto ">
+            <p className="">HORAIRES DURANT LA FERMETURE COVID</p>
+            <p className="mt-2 ">
+              CREPES PARTY <br />
+              Tous les mercredis <br />
+              12h-17h
+            </p>
+            <p className="mt-2 ">
+              CANTINES TROTTOIR
+              <br />
+              Tous les samedis
+              <br />
+              12h - 17h
+            </p>
           </div>
+</div>
         </div>
 
         {/* <div className=" px-6 mt-20 LibreBaskerville">

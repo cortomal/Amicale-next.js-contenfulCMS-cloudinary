@@ -23,7 +23,8 @@ export default function PostList({ posts = [] }) {
                 day: 'numeric',
                 hour: 'numeric',
                 minute: 'numeric',
-                second: 'numeric'})}</p>
+                // second: 'numeric'
+                })}</p>
               {/* <img
                 src={post.fields.imageCloudinary[0].secure_url}
                 width="100%"
