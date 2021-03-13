@@ -49,21 +49,27 @@ export default function Index({ posts }) {
                 </h1>
 
                 {/* <p>Horaires: {Date(post.fields.date).toString()}</p> */}
+                
+                <Markdown
+                  source={posts[0].fields.description}
+                  escapeHtml={true}
+                />
+{/*                 
                 <Markdown
                   source={posts[0].fields.body.substr(0, 1500) + "..."}
                   escapeHtml={true}
-                />
-                <p className="underline">Lire plus</p>
+                /> */}
+                {/* <p className="underline">Lire plus</p> */}
               </div>
             </a>{" "} 
             </div>
           </div>
 
           <div className="grid grid-cols-2">
-            <div className='border-r border-black h-screen overflow-scroll'>
+            <div className='border-r border-black h-screen overflow-scroll srollbar-none'>
                 <PostList posts={posts.slice(1, 10)} />
             </div>
-            <div className='border-r border-black h-screen overflow-scroll' >
+            <div className='border-r border-black h-screen overflow-scroll srollbar-none' >
             <PostList posts={posts.slice(2, 10)} />
             </div>
           
