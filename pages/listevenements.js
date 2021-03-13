@@ -20,37 +20,66 @@ export default function Index({ posts }) {
       </Head>
 
       <Layout>
-        <div className="mt-10 grid grid-cols-3">
+        <div className=" grid grid-cols-3">
           <div className="border-r border-black">
-            <div className="ml-6 pl-3 pr-3">
-            <p> {new Date(posts[0].fields.date).toLocaleString('fr-FR',{
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric'})}</p>
-              <img
-                src={posts[0].fields.imageCloudinary[0].secure_url}
-                height="auto"
-                width="100%"
-              />
-              <h1 className="font-semibold text-xl text-center mt-3 mb-6 ">
-                {posts[0].fields.title}
-              </h1>
-              {/* <p>Horaires: {Date(post.fields.date).toString()}</p> */}
-              <Markdown source={posts[0].fields.body} escapeHtml={true} className=''/>
+
+            <div className="h-screen overflow-scroll">
+            <a href={`/post/${posts[0].fields.slug}`}>
+              <div className="ml-3">
+                <p>
+                  {" "}
+                  {new Date(posts[0].fields.date).toLocaleString("fr-FR", {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "numeric",
+                    second: "numeric",
+                  })}
+                </p>
+                <img
+                  src={posts[0].fields.imageCloudinary[0].secure_url}
+                  height="auto"
+                  width="100%"
+                />
+
+                <h1 className="font-semibold text-xl  mt-3 mb-6 ">
+                  {posts[0].fields.title}
+                </h1>
+
+                {/* <p>Horaires: {Date(post.fields.date).toString()}</p> */}
+                <Markdown
+                  source={posts[0].fields.body.substr(0, 1500) + "..."}
+                  escapeHtml={true}
+                />
+                <p className="underline">Lire plus</p>
+              </div>
+            </a>{" "} 
             </div>
           </div>
-          <div>
-            <PostList posts={posts.slice(1, 10)} />
+
+          <div className="grid grid-cols-2">
+            <div className='border-r border-black h-screen overflow-scroll'>
+                <PostList posts={posts.slice(1, 10)} />
+            </div>
+            <div className='border-r border-black h-screen overflow-scroll' >
+            <PostList posts={posts.slice(2, 10)} />
+            </div>
+          
           </div>
+
+
+
+
+
+
+
           <div className="mr-6 text-center arkm">
-          <Link href="/bizarrebazar">
-            <a className="text-5xl ">Bizarre Bazar</a>
-          </Link>
-        </div>
+            <Link href="/bizarrebazar">
+              <a className="text-5xl ">Bizarre Bazar</a>
+            </Link>
+          </div>
         </div>
 
         {/* <div className=" px-6 mt-20 LibreBaskerville">
