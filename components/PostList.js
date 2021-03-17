@@ -17,9 +17,9 @@ export default function PostList({ posts = [] }) {
           <div key={post.sys.id}>
             <a href={`/post/${post.fields.slug}`}>
               <p> {new Date(post.fields.date).toLocaleString('fr-FR',{
-                weekday: 'long',
+                weekday: 'short',
                 year: 'numeric',
-                month: 'long',
+                month: 'short',
                 day: 'numeric',
                 hour: 'numeric',
                 minute: 'numeric',

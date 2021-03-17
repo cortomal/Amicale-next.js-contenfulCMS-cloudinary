@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Navbar({ children }) {
   return (
     <div className="sticky top-0 flex justify-between px-3 pb-3 LibreBaskerville text-lg border-b border-black py-3 bg-white">
-      <Link href="/listevenements">
+      <Link href="/">
         <a className=' ' >L'Amicale du Futur, 31 rue Sébastien Gryphe Lyon 7e</a>
       </Link>
       <div className="flex justify-around">

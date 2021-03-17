@@ -9,7 +9,6 @@ export default function Publications({ publications = [] }) {
   //     return a > b ? -1 : a < b ? 1 : 0;
   //   });
 
-  console.log(publications);
   return (
     <div>
       <Head>

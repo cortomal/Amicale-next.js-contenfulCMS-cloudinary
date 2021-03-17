@@ -48,7 +48,7 @@ export default function Cantine() {
               </div>
             </div>
 
-            <p className="mt-6">
+            <div className="mt-6">
               À ces horaires, il est possible de manger bon et pas cher (menu à
               8€, 4€ prix précaires, 12€ prix soutien) les mercredi, jeudi et
               vendredi midi) mais aussi boire un verre, et surtout se passer le
@@ -65,7 +65,7 @@ export default function Cantine() {
               <div className="text-4xl font-bold mt-6 text-center">
                 amicaledufutur(at)riseup.net
               </div>
-            </p>
+            </div>
 
             <div className="mt-6">
               <small>

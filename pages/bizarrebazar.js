@@ -3,8 +3,6 @@ import Layout from "../components/Layout";
 import Markdown from "react-markdown";
 
 export default function Home({ artistes = [] }) {
-  
-  console.log(artistes[0].fields);
 
   function fisherYatesShuffle(arr){
     for(let i =arr.length-1 ; i>0 ;i--){

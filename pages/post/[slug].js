@@ -1,9 +1,14 @@
-import React from "react"
 import Head from "next/head"
 import Layout from "../../components/Layout"
 import Post from "../../components/Post"
+import { useContext } from "react";
+import { AuthContext } from "../../components/contextProvider";
 
 export default function Slug({ post }) {
+  const {stopPlay}  = useContext(AuthContext);
+
+  stopPlay()
+
   return (
     <Layout>
       <Head>
@@ -15,13 +20,12 @@ export default function Slug({ post }) {
 }
 
 export async function getStaticProps(context) {
-  // Create an instance of the Contentful JavaScript SDK
+
   const client = require("contentful").createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   })
 
-  // Fetch all results where `fields.slug` is equal to the `slug` param
   const result = await client
     .getEntries({
       content_type: "article",
