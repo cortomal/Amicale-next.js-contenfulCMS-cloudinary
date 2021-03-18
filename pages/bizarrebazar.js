@@ -32,11 +32,6 @@ export default function Home({ artistes = [] }) {
         >
         </script>
 
-        <script>
-  {  document.addEventListener('snipcart.ready', function() {
-        Snipcart.api.session.setLanguage('fr')
-    })}
-</script>
         
         <div
           id="snipcart"
