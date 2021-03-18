@@ -8,12 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "contentful": "^8.1.7",
+    "keen-slider": "^5.4.0",
     "next": "10.0.6",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.1",
     "react-markdown": "^5.0.3",
-    "react-player": "^2.9.0"
+    "react-player": "^2.9.0",
+    "reactstrap": "^8.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

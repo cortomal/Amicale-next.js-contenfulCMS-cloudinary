@@ -17,7 +17,7 @@ export default function Navbar({ children }) {
           </a>
         </div>
         <div className="mr-6 arkm">
-          <Link href="/bizarrebazar">
+          <Link href="/biz2">
             <a>Bizarre Bazar</a>
           </Link>
         </div>

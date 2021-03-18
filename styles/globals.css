@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 
-
-
 @font-face {
   font-family: "LibreBaskerville";
   src: url("/fonts/LibreBaskerville-Regular.ttf");
@@ -43,3 +41,28 @@
   height: 94vh;
 }
 
+
+
+
+.carousel-control-next {
+  filter: invert(100%);
+}
+.carousel-control-prev {
+  filter: invert(100%);
+}
+.carousel-control-prev-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0;
+}
+.carousel-control-next-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 10;
+}
+
+
+.tailleImage{
+  height:500px
+ 
+}
