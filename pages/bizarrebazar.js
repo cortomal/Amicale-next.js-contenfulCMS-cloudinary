@@ -92,9 +92,10 @@ export default function Home({ artistes = [] }) {
                     />
                     <p>{artiste.fields.prix1} euros</p>
 
+
+
                     <button
                       className="snipcart-add-item"
-                     
                       data-item-price={artiste.fields.prix1}
                       data-item-url="/bizarrebazar"
                     //  data-item-image={artiste.fields.illustrationOeuvre1[0]}
