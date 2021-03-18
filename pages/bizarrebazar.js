@@ -16,6 +16,7 @@ export default function Home({ artistes = [] }) {
   fisherYatesShuffle(artistes);
 
   return (
+<html lang='fr'>
     <div className="h-screen bg-gray-50">
       <Head>
         <title>L'Amicale | Bizarre Bazar</title>
@@ -210,10 +211,13 @@ export default function Home({ artistes = [] }) {
       </Layout>
 
       <div>
-        <div></div>
+        <div>
+
+        </div>
       </div>
 
     </div>
+    </html>
   );
 }
 
