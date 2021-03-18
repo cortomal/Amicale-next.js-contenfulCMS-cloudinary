@@ -30,11 +30,13 @@ export default function Home({ artistes = [] }) {
           async
           src="https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js"
         ></script>
+        
         <div
           id="snipcart"
           data-config-modal-style="side"
           data-api-key={process.env.SNIPCART_DATA_API_KEY}
           hidden
+          
         ></div>
       </Head>
       <Layout>
