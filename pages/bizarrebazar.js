@@ -94,7 +94,8 @@ export default function Home({ artistes = [] }) {
 
                     <button
                       className="snipcart-add-item"
-                      data-item-id={artiste.fields.oeuvre1}
+                      data-item-custom2-name= {artiste.fields.tShirt && "Taille"} 
+                      data-item-custom2-options ={artiste.fields.tShirt &&"S|M|L|XL"}
                       data-item-price={artiste.fields.prix1}
                       data-item-url="/bizarrebazar"
                       // data-item-description=""
