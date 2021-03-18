@@ -36,12 +36,15 @@ export default function Home({ artistes = [] }) {
           data-config-modal-style="side"
           data-api-key={process.env.SNIPCART_DATA_API_KEY}
           hidden
-          
+
         ></div>
       </Head>
       <Layout>
         <div>
           <div className="text-9xl px-6 mt-6 arkm">BIZARRE BAZAR</div>
+
+          <button class="snipcart-checkout px-6 text-6xl">Panier</button>
+
           <div className="px-6 mt-20 LibreBaskerville">
             {artistes.map((artiste) => (
               <div className="border-t border-black">
@@ -205,19 +208,6 @@ export default function Home({ artistes = [] }) {
         <div></div>
       </div>
 
-      {/* <main className={styles.main}>
-
-       <button class="snipcart-add-item"
-          data-item-id="Local de fou"
-          data-item-price="230000"
-          data-item-url="/index"
-          data-item-description="Un superbe local en plein coeur de la guillotiere."
-          data-item-name="un tableau de fou">
-          Ajouter au panier
-        </button>
-        <button class="snipcart-checkout">Passer la commande</button>
-  
-  */}
     </div>
   );
 }
