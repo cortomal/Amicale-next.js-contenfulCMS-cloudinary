@@ -97,15 +97,14 @@ export default function Home({ artistes = [] }) {
                      
                       data-item-price={artiste.fields.prix1}
                       data-item-url="/bizarrebazar"
-                      // data-item-description=""
                     //  data-item-image={artiste.fields.illustrationOeuvre1[0]}
                       data-item-name={artiste.fields.oeuvre1}
                       data-item-name={artiste.fields.oeuvre1}
                       data-item-custom1-name="Prix libre / Faire un don :"
                       data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                      // data-item-custom2-name= "Taille" 
-                      // data-item-custom2-options ="S|M|L|XL"
-                      data-item-shippable={artiste.fields.envoyer1}
+                      data-item-custom2-name= "Taille" 
+                      data-item-custom2-options ="S|M|L|XL"
+                      // data-item-shippable={artiste.fields.envoyer1}
                     >
                       Ajouter au panier
                     </button>
@@ -147,13 +146,11 @@ export default function Home({ artistes = [] }) {
                       data-item-id={artiste.fields.oeuvre2}
                       data-item-price={artiste.fields.prix2}
                       data-item-url="/bizarrebazar"
-                      // data-item-description=""
                       // data-item-image={artiste.fields.illustrationOeuvre2[0]}
                       data-item-name={artiste.fields.oeuvre2}
-                      data-item-name={artiste.fields.oeuvre1}
                       data-item-custom1-name="Prix libre / Faire un don :"
                       data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                      data-item-shippable={artiste.fields.envoyer2}
+                      // data-item-shippable={artiste.fields.envoyer2}
                     >
                       Ajouter au panier
                     </button>
@@ -195,10 +192,8 @@ export default function Home({ artistes = [] }) {
                       data-item-id={artiste.fields.titreOeuvre3}
                       data-item-price={artiste.fields.prixOeuvre3}
                       data-item-url="/bizarrebazar"
-                      // data-item-description=""
                       // data-item-image={artiste.fields.illustrationOeuvre3[0]}
                       data-item-name={artiste.fields.oeuvre3}
-                      data-item-name={artiste.fields.oeuvre1}
                       data-item-custom1-name="Prix libre / Faire un don :"
                       data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
                     >
