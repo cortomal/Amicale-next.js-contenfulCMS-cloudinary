@@ -93,9 +93,9 @@ export default function Home({ artistes = [] }) {
                       escapeHtml={true}
                     />
                     <p>{artiste.fields.prix1} euros</p>
+{console.log(artiste.fields.poidsOeuvre1)}
 
-
-
+                    {artiste.fields.tShirt ? 
                     <button className="snipcart-add-item"
                      data-item-id={artiste.fields.oeuvre1}
                       data-item-price={artiste.fields.prix1}
@@ -104,10 +104,22 @@ export default function Home({ artistes = [] }) {
                       data-item-custom1-name="Prix libre / Faire un don :"
                       data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
                       data-item-custom2-name= "Taille" 
-                      data-item-custom2-options ="S|M|L|XL"
+                      data-item-custom2-options ="S|M|L"
                     >
                       Ajouter au panier
                     </button>
+                    :
+                    <button className="snipcart-add-item"
+                    data-item-id={artiste.fields.oeuvre1}
+                     data-item-price={artiste.fields.prix1}
+                     data-item-url="/bizarrebazar"
+                     data-item-name={artiste.fields.oeuvre1}
+                     data-item-custom1-name="Prix libre / Faire un don :"
+                     data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                     data-item-weight={ typeof artiste.fields.poidsOeuvre1 == undefined ? 0: artiste.fields.poidsOeuvre1 }
+                   >
+                     Ajouter au panier
+                   </button>}
                   </div>
 
 
