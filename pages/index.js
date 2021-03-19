@@ -35,12 +35,12 @@ export default function App({ posts }) {
 
           <Layout>
 
-          <div className=" grid grid-cols-3 ">
+          <div className=" grid grid-cols-3 LibreBaskerville textDecorationNone">
           <div className="border-r border-black">
 
             <div>
             </div>
-            <div className="flex pl-3 border-b border-black">
+            <div className="flex font-bold text-xl pl-3 border-b border-black pb-1 pt-1 shadow">
               Evènements à venir
             </div>
             <div className="h-screen overflow-scroll srollbar-none overscroll-contain">
@@ -87,7 +87,7 @@ export default function App({ posts }) {
               ))}
                <div className="flex justify-center mt-6 mb-6 pb-20">
             <Link className="" href="/evenementsPasses">
-              <a className="border rounded-full py-3 px-6 border-black">
+              <a className="border rounded-full py-3 px-6 border-black ">
                 Voir les anciens évènements
               </a>
             </Link>
@@ -97,7 +97,7 @@ export default function App({ posts }) {
 
           <div className="grid grid-cols-2">
             <div className="border-r border-black h-screen overflow-scroll srollbar-none">
-              <div className="flex pl-3 border-b border-black bg-white">
+              <div className="flex pl-3 border-b border-black bg-white font-bold text-xl pb-1 pt-1 shadow">
                 Evènements passés
               </div>
               <PostList posts={posts.slice(1, 10)} />
@@ -127,7 +127,7 @@ export default function App({ posts }) {
 <div className="flex">
 
 
-          <div className=" justify-center items-center mx-auto my-auto ">
+          <div className=" justify-center items-center mx-auto my-auto card shadow-lg  py-6 px-6 border border-black">
             <p className="">HORAIRES DURANT LA FERMETURE COVID</p>
             <p className="mt-2 ">
               CREPES PARTY <br />

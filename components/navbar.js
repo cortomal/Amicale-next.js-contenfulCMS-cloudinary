@@ -5,18 +5,23 @@ import { useRouter } from 'next/router'
 export default function Navbar(props) {
   const router = useRouter()
 
+  let stick=''
   let bgColor = '' 
   if(router.pathname === '/bizarrebazar'){
     bgColor='#f6f036' 
-  }else{bgColor='white'}
+    stick='static'
+  }else{bgColor='white'
+  stick='sticky'
+}
 
   const style = {
-    backgroundColor:bgColor
+    backgroundColor:bgColor,
+    position:stick
   }
 
 
   return (
-    <div className={"sticky top-0 flex justify-between px-3 pb-3 LibreBaskerville text-lg border-b border-black py-3 textDecorationNone"} style={style}>
+    <div className={"top-0 flex justify-between px-3 pb-3 LibreBaskerville text-lg border-b border-black py-3 textDecorationNone" + stick} style={style} >
       <Link href="/">
         <a className='textDecorationNone' >L'Amicale du Futur, 31 rue Sébastien Gryphe Lyon 7e</a>
       </Link>

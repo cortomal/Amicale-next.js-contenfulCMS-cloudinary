@@ -10,7 +10,7 @@ export default function PostList({ posts = [] }) {
   return (
     <div>
       {/* <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2  lg:grid-cols-4 px-6 LibreBaskerville"> */}
-      <div className="">
+      <div className="LibreBaskerville">
       
         {posts.map((post) => (
           <div className="pl-3 pr-3 pb-3 border-b border-black ">
@@ -31,7 +31,7 @@ export default function PostList({ posts = [] }) {
                 height="auto"
               /> */}
 
-              <h1 className="font-semibold  mt-3 mb-3 ">
+              <h1 className="font-semibold text-sm  mt-3 mb-3 ">
                 {post.fields.title}
               </h1>
               
