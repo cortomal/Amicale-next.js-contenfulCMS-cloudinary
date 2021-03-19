@@ -88,10 +88,9 @@ export default function Home({ artistes = [] }) {
                       <div className="inline-block ">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden  transition-shadow duration-300 ease-in-out">
                           {artiste.fields.titreOeuvre1 && (
-                            <div className="">
-                              {/*//////////////////////////////
-                     ////////oeuvre 1////////////////
-                   */}
+                            <div>
+                              
+                              {/*oeuvre 1*/}
 
                               {artiste.fields.illustrationOeuvre1 && (
                                 <Carousel
@@ -178,7 +177,9 @@ export default function Home({ artistes = [] }) {
 
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden transition-shadow duration-300 ease-in-out">
+                          
                           {/* ////////oeuvre 2 */}
+
                           {artiste.fields.titreOeuvre2 && (
                             <div>
                               {artiste.fields.illustrationOeuvre2 && (
@@ -266,10 +267,9 @@ export default function Home({ artistes = [] }) {
 
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden  transition-shadow duration-300 ease-in-out">
-                          {/* 
-                    //////////////////////////
-                    /////// oeuvre 3 /////////
-                    //////////////////////////////*/}
+                          
+                          
+                          {/*oeuvre 3*/}
 
                           {artiste.fields.titreOeuvre3 && (
                             <div>
@@ -335,10 +335,9 @@ export default function Home({ artistes = [] }) {
                       </div>
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden transition-shadow duration-300 ease-in-out">
-                          {/* 
-                    //////////////////////////
-                    /////// oeuvre 4 /////////
-                    //////////////////////////////*/}
+                          
+                        {/*  oeuvre 4 */}
+
                           {artiste.fields.titreOeuvre4 && (
                             <div>
                               {artiste.fields.illustrationOeuvre4 && (
@@ -399,6 +398,200 @@ export default function Home({ artistes = [] }) {
                               </button>):<div>N'est plus disponible...</div>}
                             </div>
                           )}
+
+                    
+                          {/* oeuvre 5 */}
+
+                           {artiste.fields.titreOeuvre5 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre5 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre5.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre5.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre5[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
+                              )}
+                              <p>{artiste.fields.titreOeuvre5}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre5}
+                                escapeHtml={true}
+                              />
+                              <p>{artiste.fields.prixOeuvre5} euros</p>
+
+                              {!artiste.fields.oeuvre5Vendue ? (<button
+                                className="snipcart-add-item"
+                                data-item-id={artiste.fields.titreOeuvre5}
+                                data-item-price={artiste.fields.prixOeuvre5}
+                                data-item-url="/bizarrebazar"
+                                data-item-name={artiste.fields.titreOeuvre5}
+                                data-item-custom1-name="Prix libre / Faire un don :"
+                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                data-item-weight={
+                                  typeof artiste.fields.poidsOeuvre5 ==
+                                  undefined
+                                    ? 0
+                                    : artiste.fields.poidsOeuvre5
+                                }
+                              >
+                                Ajouter au panier
+                              </button>):<div>N'est plus disponible...</div>}
+                            </div>
+                          )}
+
+                          {/* oeuvre 6 */}
+
+                          {artiste.fields.titreOeuvre6 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre6 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre6.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre6.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre6[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
+                              )}
+                              <p>{artiste.fields.titreOeuvre6}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre6}
+                                escapeHtml={true}
+                              />
+                              <p>{artiste.fields.prixOeuvre6} euros</p>
+
+                              {!artiste.fields.oeuvre6Vendue ? (<button
+                                className="snipcart-add-item"
+                                data-item-id={artiste.fields.titreOeuvre6}
+                                data-item-price={artiste.fields.prixOeuvre6}
+                                data-item-url="/bizarrebazar"
+                                data-item-name={artiste.fields.titreOeuvre6}
+                                data-item-custom1-name="Prix libre / Faire un don :"
+                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                data-item-weight={
+                                  typeof artiste.fields.poidsOeuvre6 ==
+                                  undefined
+                                    ? 0
+                                    : artiste.fields.poidsOeuvre6
+                                }
+                              >
+                                Ajouter au panier
+                              </button>):<div>N'est plus disponible...</div>}
+                            </div>
+                          )}
+
+                          {/* oeuvre 7*/}
+
+                          {artiste.fields.titreOeuvre7 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre7 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre7.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre7.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre7[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
+                              )}
+                              <p>{artiste.fields.titreOeuvre7}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre7}
+                                escapeHtml={true}
+                              />
+                              <p>{artiste.fields.prixOeuvre7} euros</p>
+
+                              {!artiste.fields.oeuvre7Vendue ? (<button
+                                className="snipcart-add-item"
+                                data-item-id={artiste.fields.titreOeuvre7}
+                                data-item-price={artiste.fields.prixOeuvre7}
+                                data-item-url="/bizarrebazar"
+                                data-item-name={artiste.fields.titreOeuvre7}
+                                data-item-custom1-name="Prix libre / Faire un don :"
+                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                data-item-weight={
+                                  typeof artiste.fields.poidsOeuvre7 ==
+                                  undefined
+                                    ? 0
+                                    : artiste.fields.poidsOeuvre7
+                                }
+                              >
+                                Ajouter au panier
+                              </button>):<div>N'est plus disponible...</div>}
+                            </div>
+                          )}
+
+
+
+
                         </div>
                       </div>
                      
