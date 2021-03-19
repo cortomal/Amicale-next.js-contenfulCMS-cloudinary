@@ -48,6 +48,30 @@ export default function Home({ artistes = [] }) {
 
             <button className="snipcart-checkout px-6 text-6xl">Panier</button>
 
+            <div className="border-t border-black pt-3 pl-6 px-6 LibreBaskerville text-xl">
+              <p><span className="arkm"><strong>Bizarre</strong> Bazar </span>a été créé pour tenter de rendre visible un geste qui nous tient à coeur : 
+              l’infinie puissance créatrice de nos proches au profit de l’achat de l’Amicale. Vous trouverez donc ici des pièces toutes 
+              fantastiques qui nous ont été généreusement données par nos ami.e.s musicien.nes, artistes, plasticien.nes, illustrateur.rices, photographes, 
+              imprimeuse.rs, tisserand.es, potier.es, bijoutier.es, graphistes, designeuse.rs textile, peintres… Vous avez la possibilité de les acheter si elles vous 
+              plaisent afin de contribuer d’une manière originale à l’achat des murs de l’Amicale. Vous pourrez également faire un don supplémentaire lorsde votre commande.
+              N'hésitez surtout pas!</p>
+              <p>Découvrez aussi les supers compiles de l’Amicale que les copines et copains musiciens nous ont concoctés mais aussi une série spéciale de t-shirts 
+              imprimé dans les ateliers de <a className="textDecorationNone hover:text-red-600" href="https://www.grrrndzero.org/" target="_blank">Grrrnd Zero</a> 
+              avec les dessins de <a className="textDecorationNone hover:text-red-600" href="https://felicite.land/" target="_blank">Félicité Landrivon</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="https://servicelocal.fr/" target="_blank"> Service Local</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="https://marionjdanoff.net/" target="_blank"> Marion Jdanoff</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="https://www.alaricgarnier.fr/" target="_blank"> Alaric Garnier</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="http://www.benoitfrancois.art/" target="_blank"> Benoît François</a>, et 
+              <a className="textDecorationNone hover:text-red-600" href="https://www.instagram.com/soleil_de_nuit__/" target="_blank"> Soleil de nuit</a> !</p>
+              <p>Et rendez-vous prochainement pour un <span className="arkm"><strong>Bizarre</strong> Bazar </span> en réel !! Bonne visite !</p></div>
+
+            <div className="border-t border-black pt-3 pl-6 px-6 text-xl">
+              <p className="arkm">COMPILE DE L'AMICALE ---- link ---- COMPILE DE L'AMICALE ---- link</p>
+              <img src="https://res.cloudinary.com/dbqfcp9vd/image/upload/v1616165428/illustration/compile_ddzfu2.jpg" alt="la casette de la super compil de l'Amicale!" className="tailleImage">
+              </img>
+            </div>
+
+
             {artistes.map((artiste) => (
               <div className="border-t border-black pt-3 pl-6">
                 <div>{artiste.fields.nomDeLartiste}</div>
@@ -67,7 +91,7 @@ export default function Home({ artistes = [] }) {
                             <div className="">
                               {/*//////////////////////////////
                      ////////oeuvre 1////////////////
-                    ////////////////////////////////// */}
+                   */}
 
                               {artiste.fields.illustrationOeuvre1 && (
                                 <Carousel
@@ -146,7 +170,7 @@ export default function Home({ artistes = [] }) {
                                 >
                                   Ajouter au panier
                                 </button>
-                              )):<div className='text-red-500'>N'est plus disponible...</div>}
+                              )):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -234,7 +258,7 @@ export default function Home({ artistes = [] }) {
                                 >
                                   Ajouter au panier
                                 </button>
-                              )):<div className='text-red-500' >N'est plus disponible...</div>}
+                              )):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -304,7 +328,7 @@ export default function Home({ artistes = [] }) {
                                 }
                               >
                                 Ajouter au panier
-                              </button>):<div className='text-red-500' >N'est plus disponible...</div>}
+                              </button>):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -372,7 +396,7 @@ export default function Home({ artistes = [] }) {
                                 }
                               >
                                 Ajouter au panier
-                              </button>):<div className='text-red-500' >N'est plus disponible...</div>}
+                              </button>):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -657,7 +681,7 @@ export default function Home({ artistes = [] }) {
           <div></div>
         </div>
       </div>
-    </html>
+    //</html>
   );
 }
 
