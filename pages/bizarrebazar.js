@@ -48,6 +48,30 @@ export default function Home({ artistes = [] }) {
 
             <button className="snipcart-checkout px-6 text-6xl">Panier</button>
 
+            <div className="border-t border-black pt-3 pl-6 px-6 LibreBaskerville text-xl">
+              <p><span className="arkm"><strong>Bizarre</strong> Bazar </span>a été créé pour tenter de rendre visible un geste qui nous tient à coeur : 
+              l’infinie puissance créatrice de nos proches au profit de l’achat de l’Amicale. Vous trouverez donc ici des pièces toutes 
+              fantastiques qui nous ont été généreusement données par nos ami.e.s musicien.nes, artistes, plasticien.nes, illustrateur.rices, photographes, 
+              imprimeuse.rs, tisserand.es, potier.es, bijoutier.es, graphistes, designeuse.rs textile, peintres… Vous avez la possibilité de les acheter si elles vous 
+              plaisent afin de contribuer d’une manière originale à l’achat des murs de l’Amicale. Vous pourrez également faire un don supplémentaire lorsde votre commande.
+              N'hésitez surtout pas!</p>
+              <p>Découvrez aussi les supers compiles de l’Amicale que les copines et copains musiciens nous ont concoctés mais aussi une série spéciale de t-shirts 
+              imprimé dans les ateliers de <a className="textDecorationNone hover:text-red-600" href="https://www.grrrndzero.org/" target="_blank">Grrrnd Zero</a> 
+              avec les dessins de <a className="textDecorationNone hover:text-red-600" href="https://felicite.land/" target="_blank">Félicité Landrivon</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="https://servicelocal.fr/" target="_blank"> Service Local</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="https://marionjdanoff.net/" target="_blank"> Marion Jdanoff</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="https://www.alaricgarnier.fr/" target="_blank"> Alaric Garnier</a>, 
+              <a className="textDecorationNone hover:text-red-600" href="http://www.benoitfrancois.art/" target="_blank"> Benoît François</a>, et 
+              <a className="textDecorationNone hover:text-red-600" href="https://www.instagram.com/soleil_de_nuit__/" target="_blank"> Soleil de nuit</a> !</p>
+              <p>Et rendez-vous prochainement pour un <span className="arkm"><strong>Bizarre</strong> Bazar </span> en réel !! Bonne visite !</p></div>
+
+            <div className="border-t border-black pt-3 pl-6 px-6 text-xl">
+              <p className="arkm">COMPILE DE L'AMICALE ---- link ---- COMPILE DE L'AMICALE ---- link</p>
+              <img src="https://res.cloudinary.com/dbqfcp9vd/image/upload/v1616165428/illustration/compile_ddzfu2.jpg" alt="la casette de la super compil de l'Amicale!" className="tailleImage">
+              </img>
+            </div>
+
+
             {artistes.map((artiste) => (
               <div className="border-t border-black pt-3 pl-6">
                 <div>{artiste.fields.nomDeLartiste}</div>
@@ -64,10 +88,9 @@ export default function Home({ artistes = [] }) {
                       <div className="inline-block ">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden  transition-shadow duration-300 ease-in-out">
                           {artiste.fields.titreOeuvre1 && (
-                            <div className="">
-                              {/*//////////////////////////////
-                     ////////oeuvre 1////////////////
-                    ////////////////////////////////// */}
+                            <div>
+                              
+                              {/*oeuvre 1*/}
 
                               {artiste.fields.illustrationOeuvre1 && (
                                 <Carousel
@@ -146,7 +169,7 @@ export default function Home({ artistes = [] }) {
                                 >
                                   Ajouter au panier
                                 </button>
-                              )):<div className='text-red-500'>N'est plus disponible...</div>}
+                              )):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -154,7 +177,9 @@ export default function Home({ artistes = [] }) {
 
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden transition-shadow duration-300 ease-in-out">
+                          
                           {/* ////////oeuvre 2 */}
+
                           {artiste.fields.titreOeuvre2 && (
                             <div>
                               {artiste.fields.illustrationOeuvre2 && (
@@ -234,7 +259,7 @@ export default function Home({ artistes = [] }) {
                                 >
                                   Ajouter au panier
                                 </button>
-                              )):<div className='text-red-500' >N'est plus disponible...</div>}
+                              )):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -242,10 +267,9 @@ export default function Home({ artistes = [] }) {
 
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden  transition-shadow duration-300 ease-in-out">
-                          {/* 
-                    //////////////////////////
-                    /////// oeuvre 3 /////////
-                    //////////////////////////////*/}
+                          
+                          
+                          {/*oeuvre 3*/}
 
                           {artiste.fields.titreOeuvre3 && (
                             <div>
@@ -304,17 +328,16 @@ export default function Home({ artistes = [] }) {
                                 }
                               >
                                 Ajouter au panier
-                              </button>):<div className='text-red-500' >N'est plus disponible...</div>}
+                              </button>):<div>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
                       </div>
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden transition-shadow duration-300 ease-in-out">
-                          {/* 
-                    //////////////////////////
-                    /////// oeuvre 4 /////////
-                    //////////////////////////////*/}
+                          
+                        {/*  oeuvre 4 */}
+
                           {artiste.fields.titreOeuvre4 && (
                             <div>
                               {artiste.fields.illustrationOeuvre4 && (
@@ -372,9 +395,203 @@ export default function Home({ artistes = [] }) {
                                 }
                               >
                                 Ajouter au panier
-                              </button>):<div className='text-red-500' >N'est plus disponible...</div>}
+                              </button>):<div>N'est plus disponible...</div>}
                             </div>
                           )}
+
+                    
+                          {/* oeuvre 5 */}
+
+                           {artiste.fields.titreOeuvre5 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre5 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre5.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre5.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre5[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
+                              )}
+                              <p>{artiste.fields.titreOeuvre5}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre5}
+                                escapeHtml={true}
+                              />
+                              <p>{artiste.fields.prixOeuvre5} euros</p>
+
+                              {!artiste.fields.oeuvre5Vendue ? (<button
+                                className="snipcart-add-item"
+                                data-item-id={artiste.fields.titreOeuvre5}
+                                data-item-price={artiste.fields.prixOeuvre5}
+                                data-item-url="/bizarrebazar"
+                                data-item-name={artiste.fields.titreOeuvre5}
+                                data-item-custom1-name="Prix libre / Faire un don :"
+                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                data-item-weight={
+                                  typeof artiste.fields.poidsOeuvre5 ==
+                                  undefined
+                                    ? 0
+                                    : artiste.fields.poidsOeuvre5
+                                }
+                              >
+                                Ajouter au panier
+                              </button>):<div>N'est plus disponible...</div>}
+                            </div>
+                          )}
+
+                          {/* oeuvre 6 */}
+
+                          {artiste.fields.titreOeuvre6 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre6 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre6.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre6.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre6[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
+                              )}
+                              <p>{artiste.fields.titreOeuvre6}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre6}
+                                escapeHtml={true}
+                              />
+                              <p>{artiste.fields.prixOeuvre6} euros</p>
+
+                              {!artiste.fields.oeuvre6Vendue ? (<button
+                                className="snipcart-add-item"
+                                data-item-id={artiste.fields.titreOeuvre6}
+                                data-item-price={artiste.fields.prixOeuvre6}
+                                data-item-url="/bizarrebazar"
+                                data-item-name={artiste.fields.titreOeuvre6}
+                                data-item-custom1-name="Prix libre / Faire un don :"
+                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                data-item-weight={
+                                  typeof artiste.fields.poidsOeuvre6 ==
+                                  undefined
+                                    ? 0
+                                    : artiste.fields.poidsOeuvre6
+                                }
+                              >
+                                Ajouter au panier
+                              </button>):<div>N'est plus disponible...</div>}
+                            </div>
+                          )}
+
+                          {/* oeuvre 7*/}
+
+                          {artiste.fields.titreOeuvre7 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre7 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre7.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre7.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre7[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
+                              )}
+                              <p>{artiste.fields.titreOeuvre7}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre7}
+                                escapeHtml={true}
+                              />
+                              <p>{artiste.fields.prixOeuvre7} euros</p>
+
+                              {!artiste.fields.oeuvre7Vendue ? (<button
+                                className="snipcart-add-item"
+                                data-item-id={artiste.fields.titreOeuvre7}
+                                data-item-price={artiste.fields.prixOeuvre7}
+                                data-item-url="/bizarrebazar"
+                                data-item-name={artiste.fields.titreOeuvre7}
+                                data-item-custom1-name="Prix libre / Faire un don :"
+                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                data-item-weight={
+                                  typeof artiste.fields.poidsOeuvre7 ==
+                                  undefined
+                                    ? 0
+                                    : artiste.fields.poidsOeuvre7
+                                }
+                              >
+                                Ajouter au panier
+                              </button>):<div>N'est plus disponible...</div>}
+                            </div>
+                          )}
+
+
+
+
                         </div>
                       </div>
                      
@@ -657,7 +874,7 @@ export default function Home({ artistes = [] }) {
           <div></div>
         </div>
       </div>
-    </html>
+    //</html>
   );
 }
 
