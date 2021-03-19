@@ -78,3 +78,13 @@
 .bgColor{
  background-color: #f6f036
 }
+
+.textDecorationNone{
+  text-decoration: none;
+  color: black;
+}
+
+.textDecorationNone :hover{
+  text-decoration: none;
+  color: black;
+}

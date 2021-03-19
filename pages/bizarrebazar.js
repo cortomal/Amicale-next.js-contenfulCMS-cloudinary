@@ -53,7 +53,7 @@ export default function Home({ artistes = [] }) {
                 <div>{artiste.fields.nomDeLartiste}</div>
                 <a
                   href={artiste.fields.siteDeLartiste}
-                  className="hover:text-red-600"
+                  className="hover:text-red-600 textDecorationNone"
                   target="_blank"
                 >
                   {artiste.fields.siteDeLartiste}
@@ -146,7 +146,7 @@ export default function Home({ artistes = [] }) {
                                 >
                                   Ajouter au panier
                                 </button>
-                              )):<div>N'est plus disponible...</div>}
+                              )):<div className='text-red-500'>N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -234,7 +234,7 @@ export default function Home({ artistes = [] }) {
                                 >
                                   Ajouter au panier
                                 </button>
-                              )):<div>N'est plus disponible...</div>}
+                              )):<div className='text-red-500' >N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -304,7 +304,7 @@ export default function Home({ artistes = [] }) {
                                 }
                               >
                                 Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              </button>):<div className='text-red-500' >N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
@@ -372,7 +372,7 @@ export default function Home({ artistes = [] }) {
                                 }
                               >
                                 Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              </button>):<div className='text-red-500' >N'est plus disponible...</div>}
                             </div>
                           )}
                         </div>
