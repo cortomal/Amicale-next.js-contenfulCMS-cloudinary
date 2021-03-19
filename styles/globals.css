@@ -18,6 +18,9 @@
   src: url("/fonts/fugue_headline.otf");
 }
 
+
+/* fonts */
+
 .LibreBaskerville{
   font-family:'LibreBaskerville'
 }
@@ -32,7 +35,7 @@
 
 
 
-
+/* page index */
 .srollbar-none{
   scrollbar-width: none;
 }
@@ -43,7 +46,7 @@
 
 
 
-
+/* page bizarre bazar */
 .carousel-control-next {
   filter: invert(100%);
 }
@@ -63,6 +66,15 @@
 
 
 .tailleImage{
-  height:500px
- 
+  height:500px;
+  width :450px
+}
+
+.taillecontainer{
+  height:700px;
+  width :500px
+}
+
+.bgColor{
+ background-color: #f6f036
 }
