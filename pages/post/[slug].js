@@ -1,14 +1,8 @@
 import Head from "next/head"
 import Layout from "../../components/Layout"
 import Post from "../../components/Post"
-import { useContext } from "react";
-import { AuthContext } from "../../components/contextProvider";
 
 export default function Slug({ post }) {
-  const {stopPlay}  = useContext(AuthContext);
-
-  stopPlay()
-
   return (
     <Layout>
       <Head>

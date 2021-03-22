@@ -1,20 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import PostList from "../components/PostList";
 import ReactPlayer from "react-player";
-import { useContext } from "react";
 import { AuthContext } from "../components/contextProvider";
 import Markdown from "react-markdown";
 import Link from "next/link";
+import { useRouter } from 'next/router'
+
 
 export default function App({ posts }) {
  const { initialState, stopPlay } = useContext(AuthContext);
  const enUne = posts.filter((article) => article.fields.enUne === true);
+ const router = useRouter()
 
   useEffect(() => {
     setTimeout(() => stopPlay(), 6000)
   }, []);
+
 
   posts.sort(function (a, b) {
     a = new Date(a.fields.date);

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Markdown from "react-markdown";
-
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -15,9 +14,6 @@ export default function Home({ artistes = [] }) {
 
   fisherYatesShuffle(artistes);
 
-
-
-  
   return (
     <html lang="fr">
       <div className=" bgColor">
@@ -44,33 +40,146 @@ export default function Home({ artistes = [] }) {
         </Head>
         <Layout>
           <div>
-            <div className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn ">BIZARRE BAZAR</div>
+            <div className="flex justify-between pt-6">
+              <div className="">
+                <strong className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn ">
+                  BIZ
+                </strong>
+                <br />
+                <strong className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn pl-44">
+                  AR
+                </strong>
+                <br />
+                <strong className=" text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn ">
+                  R E
+                </strong>
+              </div>
 
-            <button className="snipcart-checkout px-6 text-6xl">Panier</button>
-
-            <div className="border-t border-black pt-3 pl-6 px-6 LibreBaskerville text-xl">
-              <p><span className="arkm"><strong>Bizarre</strong> Bazar </span>a été créé pour tenter de rendre visible un geste qui nous tient à coeur : 
-              l’infinie puissance créatrice de nos proches au profit de l’achat de l’Amicale. Vous trouverez donc ici des pièces toutes 
-              fantastiques qui nous ont été généreusement données par nos ami.e.s musicien.nes, artistes, plasticien.nes, illustrateur.rices, photographes, 
-              imprimeuse.rs, tisserand.es, potier.es, bijoutier.es, graphistes, designeuse.rs textile, peintres… Vous avez la possibilité de les acheter si elles vous 
-              plaisent afin de contribuer d’une manière originale à l’achat des murs de l’Amicale. Vous pourrez également faire un don supplémentaire lorsde votre commande.
-              N'hésitez surtout pas!</p>
-              <p>Découvrez aussi les supers compiles de l’Amicale que les copines et copains musiciens nous ont concoctés mais aussi une série spéciale de t-shirts 
-              imprimé dans les ateliers de <a className="textDecorationNone hover:text-red-600" href="https://www.grrrndzero.org/" target="_blank">Grrrnd Zero</a> 
-              avec les dessins de <a className="textDecorationNone hover:text-red-600" href="https://felicite.land/" target="_blank">Félicité Landrivon</a>, 
-              <a className="textDecorationNone hover:text-red-600" href="https://servicelocal.fr/" target="_blank"> Service Local</a>, 
-              <a className="textDecorationNone hover:text-red-600" href="https://marionjdanoff.net/" target="_blank"> Marion Jdanoff</a>, 
-              <a className="textDecorationNone hover:text-red-600" href="https://www.alaricgarnier.fr/" target="_blank"> Alaric Garnier</a>, 
-              <a className="textDecorationNone hover:text-red-600" href="http://www.benoitfrancois.art/" target="_blank"> Benoît François</a>, et 
-              <a className="textDecorationNone hover:text-red-600" href="https://www.instagram.com/soleil_de_nuit__/" target="_blank"> Soleil de nuit</a> !</p>
-              <p>Et rendez-vous prochainement pour un <span className="arkm"><strong>Bizarre</strong> Bazar </span> en réel !! Bonne visite !</p></div>
-
-            <div className="border-t border-black pt-3 pl-6 px-6 text-xl">
-              <p className="arkm">COMPILE DE L'AMICALE ---- link ---- COMPILE DE L'AMICALE ---- link</p>
-              <img src="https://res.cloudinary.com/dbqfcp9vd/image/upload/v1616165428/illustration/compile_ddzfu2.jpg" alt="la casette de la super compil de l'Amicale!" className="tailleImage">
-              </img>
+              <div className="pr-96">
+                <span className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn ">
+                  BAZ
+                </span>
+                <br />
+                <span className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn pl-36">
+                  A
+                </span>
+                <br />
+                <span className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn pl-80">
+                  R
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row-reverse">
+              <button className=" snipcart-checkout px-6 text-xl">
+                Panier
+              </button>
             </div>
 
+            <div className=" pt-3 pl-6 px-6 LibreBaskerville text-xl">
+              <p className='border-t border-black'>
+                <span className="arkm ">
+                  <strong>Bizarre</strong> Bazar{" "}
+                </span>
+                a été créé pour tenter de rendre visible un geste qui nous tient
+                à coeur : l’infinie puissance créatrice de nos proches au profit
+                de l’achat de l’Amicale. Vous trouverez donc ici des pièces
+                toutes fantastiques qui nous ont été généreusement données par
+                nos ami.e.s musicien.nes, artistes, plasticien.nes,
+                illustrateur.rices, photographes, imprimeuse.rs, tisserand.es,
+                potier.es, bijoutier.es, graphistes, designeuse.rs textile,
+                peintres… Vous avez la possibilité de les acheter si elles vous
+                plaisent afin de contribuer d’une manière originale à l’achat
+                des murs de l’Amicale. Vous pourrez également faire un don
+                supplémentaire lorsde votre commande. N'hésitez surtout pas!
+              </p>
+                      {" "}
+              <p >
+                Découvrez aussi les supers compiles de l’Amicale que les copines
+                et copains musiciens nous ont concoctés mais aussi une série
+                spéciale de t-shirts imprimé dans les ateliers de{" "}
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="https://www.grrrndzero.org/"
+                  target="_blank"
+                >
+                  Grrrnd Zero
+                </a>
+                avec les dessins de{" "}
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="https://felicite.land/"
+                  target="_blank"
+                >
+                  Félicité Landrivon
+                </a>
+                ,
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="https://servicelocal.fr/"
+                  target="_blank"
+                >
+                  {" "}
+                  Service Local
+                </a>
+                ,
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="https://marionjdanoff.net/"
+                  target="_blank"
+                >
+                  {" "}
+                  Marion Jdanoff
+                </a>
+                ,
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="https://www.alaricgarnier.fr/"
+                  target="_blank"
+                >
+                  {" "}
+                  Alaric Garnier
+                </a>
+                ,
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="http://www.benoitfrancois.art/"
+                  target="_blank"
+                >
+                  {" "}
+                  Benoît François
+                </a>
+                , et
+                <a
+                  className="textDecorationNone hover:text-red-600"
+                  href="https://www.instagram.com/soleil_de_nuit__/"
+                  target="_blank"
+                >
+                  {" "}
+                  Soleil de nuit
+                </a>{" "}
+                !
+              </p>
+                      {" "}
+              <p>
+                Et rendez-vous prochainement pour un{" "}
+                <span className="arkm">
+                  <strong>Bizarre</strong> Bazar{" "}
+                </span>{" "}
+                en réel !! Bonne visite !
+              </p>
+            </div>
+
+            <div className="pt-3 pl-6 px-6 text-xl pb-3">
+              <p className="arkm border-b border-t border-black py-1">
+                COMPILE DE L'AMICALE ---- link ---- COMPILE DE L'AMICALE ----
+                link
+              </p>
+              <img
+                src="https://res.cloudinary.com/dbqfcp9vd/image/upload/v1616165428/illustration/compile_ddzfu2.jpg"
+                alt="la casette de la super compil de l'Amicale!"
+                className="tailleImage"
+              ></img>
+            </div>
 
             {artistes.map((artiste) => (
               <div className="border-t border-black pt-3 pl-6">
@@ -89,7 +198,6 @@ export default function Home({ artistes = [] }) {
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden  transition-shadow duration-300 ease-in-out">
                           {artiste.fields.titreOeuvre1 && (
                             <div>
-                              
                               {/*oeuvre 1*/}
 
                               {artiste.fields.illustrationOeuvre1 && (
@@ -131,45 +239,49 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre1} euros</p>
 
-                              {!artiste.fields.oeuvre1Vendue ? (artiste.fields.tShirt1 ? (
-                                <button
-                                  className="snipcart-add-item"
-                                  data-item-id={artiste.fields.titreOeuvre1}
-                                  data-item-price={artiste.fields.prixOeuvre1}
-                                  data-item-url="/bizarrebazar"
-                                  data-item-name={artiste.fields.titreOeuvre1}
-                                  data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                  data-item-custom2-name="Taille"
-                                  data-item-custom2-options="S|M|L"
-                                  data-item-weight={
-                                    typeof artiste.fields.poidsOeuvre1 ==
-                                    undefined
-                                      ? 0
-                                      : artiste.fields.poidsOeuvre1
-                                  }
-                                >
-                                  Ajouter au panier
-                                </button>
+                              {!artiste.fields.oeuvre1Vendue ? (
+                                artiste.fields.tShirt1 ? (
+                                  <button
+                                    className="snipcart-add-item"
+                                    data-item-id={artiste.fields.titreOeuvre1}
+                                    data-item-price={artiste.fields.prixOeuvre1}
+                                    data-item-url="/bizarrebazar"
+                                    data-item-name={artiste.fields.titreOeuvre1}
+                                    data-item-custom1-name="Prix libre / Faire un don :"
+                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-custom2-name="Taille"
+                                    data-item-custom2-options="S|M|L"
+                                    data-item-weight={
+                                      typeof artiste.fields.poidsOeuvre1 ==
+                                      undefined
+                                        ? 0
+                                        : artiste.fields.poidsOeuvre1
+                                    }
+                                  >
+                                    Ajouter au panier
+                                  </button>
+                                ) : (
+                                  <button
+                                    className="snipcart-add-item"
+                                    data-item-id={artiste.fields.titreOeuvre1}
+                                    data-item-price={artiste.fields.prixOeuvre1}
+                                    data-item-url="/bizarrebazar"
+                                    data-item-name={artiste.fields.titreOeuvre1}
+                                    data-item-custom1-name="Prix libre / Faire un don :"
+                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-weight={
+                                      typeof artiste.fields.poidsOeuvre1 ==
+                                      undefined
+                                        ? 0
+                                        : artiste.fields.poidsOeuvre1
+                                    }
+                                  >
+                                    Ajouter au panier
+                                  </button>
+                                )
                               ) : (
-                                <button
-                                  className="snipcart-add-item"
-                                  data-item-id={artiste.fields.titreOeuvre1}
-                                  data-item-price={artiste.fields.prixOeuvre1}
-                                  data-item-url="/bizarrebazar"
-                                  data-item-name={artiste.fields.titreOeuvre1}
-                                  data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                  data-item-weight={
-                                    typeof artiste.fields.poidsOeuvre1 ==
-                                    undefined
-                                      ? 0
-                                      : artiste.fields.poidsOeuvre1
-                                  }
-                                >
-                                  Ajouter au panier
-                                </button>
-                              )):<div>N'est plus disponible...</div>}
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
                         </div>
@@ -177,7 +289,6 @@ export default function Home({ artistes = [] }) {
 
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden transition-shadow duration-300 ease-in-out">
-                          
                           {/* ////////oeuvre 2 */}
 
                           {artiste.fields.titreOeuvre2 && (
@@ -221,45 +332,49 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre2} euros</p>
 
-                              {!artiste.fields.oeuvre2Vendue ? (artiste.fields.tShirt2 ? (
-                                <button
-                                  className="snipcart-add-item"
-                                  data-item-id={artiste.fields.titreOeuvre2}
-                                  data-item-price={artiste.fields.prixOeuvre2}
-                                  data-item-url="/bizarrebazar"
-                                  data-item-name={artiste.fields.titreOeuvre2}
-                                  data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                  data-item-custom2-name="Taille"
-                                  data-item-custom2-options="S|M|L"
-                                  data-item-weight={
-                                    typeof artiste.fields.poidsOeuvre2 ==
-                                    undefined
-                                      ? 0
-                                      : artiste.fields.poidsOeuvre2
-                                  }
-                                >
-                                  Ajouter au panier
-                                </button>
+                              {!artiste.fields.oeuvre2Vendue ? (
+                                artiste.fields.tShirt2 ? (
+                                  <button
+                                    className="snipcart-add-item"
+                                    data-item-id={artiste.fields.titreOeuvre2}
+                                    data-item-price={artiste.fields.prixOeuvre2}
+                                    data-item-url="/bizarrebazar"
+                                    data-item-name={artiste.fields.titreOeuvre2}
+                                    data-item-custom1-name="Prix libre / Faire un don :"
+                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-custom2-name="Taille"
+                                    data-item-custom2-options="S|M|L"
+                                    data-item-weight={
+                                      typeof artiste.fields.poidsOeuvre2 ==
+                                      undefined
+                                        ? 0
+                                        : artiste.fields.poidsOeuvre2
+                                    }
+                                  >
+                                    Ajouter au panier
+                                  </button>
+                                ) : (
+                                  <button
+                                    className="snipcart-add-item"
+                                    data-item-id={artiste.fields.titreOeuvre2}
+                                    data-item-price={artiste.fields.prixOeuvre2}
+                                    data-item-url="/bizarrebazar"
+                                    data-item-name={artiste.fields.titreOeuvre2}
+                                    data-item-custom1-name="Prix libre / Faire un don :"
+                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-weight={
+                                      typeof artiste.fields.poidsOeuvre2 ==
+                                      undefined
+                                        ? 0
+                                        : artiste.fields.poidsOeuvre2
+                                    }
+                                  >
+                                    Ajouter au panier
+                                  </button>
+                                )
                               ) : (
-                                <button
-                                  className="snipcart-add-item"
-                                  data-item-id={artiste.fields.titreOeuvre2}
-                                  data-item-price={artiste.fields.prixOeuvre2}
-                                  data-item-url="/bizarrebazar"
-                                  data-item-name={artiste.fields.titreOeuvre2}
-                                  data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                  data-item-weight={
-                                    typeof artiste.fields.poidsOeuvre2 ==
-                                    undefined
-                                      ? 0
-                                      : artiste.fields.poidsOeuvre2
-                                  }
-                                >
-                                  Ajouter au panier
-                                </button>
-                              )):<div>N'est plus disponible...</div>}
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
                         </div>
@@ -267,8 +382,6 @@ export default function Home({ artistes = [] }) {
 
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden  transition-shadow duration-300 ease-in-out">
-                          
-                          
                           {/*oeuvre 3*/}
 
                           {artiste.fields.titreOeuvre3 && (
@@ -312,31 +425,34 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre3} euros</p>
 
-                              {!artiste.fields.oeuvre3Vendue ? (<button
-                                className="snipcart-add-item"
-                                data-item-id={artiste.fields.titreOeuvre3}
-                                data-item-price={artiste.fields.prixOeuvre3}
-                                data-item-url="/bizarrebazar"
-                                data-item-name={artiste.fields.titreOeuvre3}
-                                data-item-custom1-name="Prix libre / Faire un don :"
-                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                data-item-weight={
-                                  typeof artiste.fields.poidsOeuvre3 ==
-                                  undefined
-                                    ? 0
-                                    : artiste.fields.poidsOeuvre3
-                                }
-                              >
-                                Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              {!artiste.fields.oeuvre3Vendue ? (
+                                <button
+                                  className="snipcart-add-item"
+                                  data-item-id={artiste.fields.titreOeuvre3}
+                                  data-item-price={artiste.fields.prixOeuvre3}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre3}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre3 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre3
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
                         </div>
                       </div>
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden transition-shadow duration-300 ease-in-out">
-                          
-                        {/*  oeuvre 4 */}
+                          {/*  oeuvre 4 */}
 
                           {artiste.fields.titreOeuvre4 && (
                             <div>
@@ -379,30 +495,33 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre4} euros</p>
 
-                              {!artiste.fields.oeuvre4Vendue ? (<button
-                                className="snipcart-add-item"
-                                data-item-id={artiste.fields.titreOeuvre4}
-                                data-item-price={artiste.fields.prixOeuvre4}
-                                data-item-url="/bizarrebazar"
-                                data-item-name={artiste.fields.titreOeuvre4}
-                                data-item-custom1-name="Prix libre / Faire un don :"
-                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                data-item-weight={
-                                  typeof artiste.fields.poidsOeuvre4 ==
-                                  undefined
-                                    ? 0
-                                    : artiste.fields.poidsOeuvre4
-                                }
-                              >
-                                Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              {!artiste.fields.oeuvre4Vendue ? (
+                                <button
+                                  className="snipcart-add-item"
+                                  data-item-id={artiste.fields.titreOeuvre4}
+                                  data-item-price={artiste.fields.prixOeuvre4}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre4}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre4 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre4
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
 
-                    
                           {/* oeuvre 5 */}
 
-                           {artiste.fields.titreOeuvre5 && (
+                          {artiste.fields.titreOeuvre5 && (
                             <div>
                               {artiste.fields.illustrationOeuvre5 && (
                                 <Carousel
@@ -443,23 +562,27 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre5} euros</p>
 
-                              {!artiste.fields.oeuvre5Vendue ? (<button
-                                className="snipcart-add-item"
-                                data-item-id={artiste.fields.titreOeuvre5}
-                                data-item-price={artiste.fields.prixOeuvre5}
-                                data-item-url="/bizarrebazar"
-                                data-item-name={artiste.fields.titreOeuvre5}
-                                data-item-custom1-name="Prix libre / Faire un don :"
-                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                data-item-weight={
-                                  typeof artiste.fields.poidsOeuvre5 ==
-                                  undefined
-                                    ? 0
-                                    : artiste.fields.poidsOeuvre5
-                                }
-                              >
-                                Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              {!artiste.fields.oeuvre5Vendue ? (
+                                <button
+                                  className="snipcart-add-item"
+                                  data-item-id={artiste.fields.titreOeuvre5}
+                                  data-item-price={artiste.fields.prixOeuvre5}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre5}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre5 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre5
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
 
@@ -506,23 +629,27 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre6} euros</p>
 
-                              {!artiste.fields.oeuvre6Vendue ? (<button
-                                className="snipcart-add-item"
-                                data-item-id={artiste.fields.titreOeuvre6}
-                                data-item-price={artiste.fields.prixOeuvre6}
-                                data-item-url="/bizarrebazar"
-                                data-item-name={artiste.fields.titreOeuvre6}
-                                data-item-custom1-name="Prix libre / Faire un don :"
-                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                data-item-weight={
-                                  typeof artiste.fields.poidsOeuvre6 ==
-                                  undefined
-                                    ? 0
-                                    : artiste.fields.poidsOeuvre6
-                                }
-                              >
-                                Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              {!artiste.fields.oeuvre6Vendue ? (
+                                <button
+                                  className="snipcart-add-item"
+                                  data-item-id={artiste.fields.titreOeuvre6}
+                                  data-item-price={artiste.fields.prixOeuvre6}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre6}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre6 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre6
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
 
@@ -569,33 +696,31 @@ export default function Home({ artistes = [] }) {
                               />
                               <p>{artiste.fields.prixOeuvre7} euros</p>
 
-                              {!artiste.fields.oeuvre7Vendue ? (<button
-                                className="snipcart-add-item"
-                                data-item-id={artiste.fields.titreOeuvre7}
-                                data-item-price={artiste.fields.prixOeuvre7}
-                                data-item-url="/bizarrebazar"
-                                data-item-name={artiste.fields.titreOeuvre7}
-                                data-item-custom1-name="Prix libre / Faire un don :"
-                                data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                                data-item-weight={
-                                  typeof artiste.fields.poidsOeuvre7 ==
-                                  undefined
-                                    ? 0
-                                    : artiste.fields.poidsOeuvre7
-                                }
-                              >
-                                Ajouter au panier
-                              </button>):<div>N'est plus disponible...</div>}
+                              {!artiste.fields.oeuvre7Vendue ? (
+                                <button
+                                  className="snipcart-add-item"
+                                  data-item-id={artiste.fields.titreOeuvre7}
+                                  data-item-price={artiste.fields.prixOeuvre7}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre7}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre7 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre7
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
                             </div>
                           )}
-
-
-
-
                         </div>
                       </div>
-                     
-                      
                     </div>
                   </div>
                 </div>
@@ -874,7 +999,8 @@ export default function Home({ artistes = [] }) {
           <div></div>
         </div>
       </div>
-    //</html>
+      //
+    </html>
   );
 }
 
