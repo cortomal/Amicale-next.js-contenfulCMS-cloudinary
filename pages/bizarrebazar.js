@@ -73,8 +73,8 @@ export default function Home({ artistes = [] }) {
               <button className=" snipcart-checkout px-6 text-xl no-underline hover:underline">
                 Panier
               </button>
-              <span class="snipcart-items-count"></span> <br/>
-              <span class="snipcart-total-price"></span>
+              {/* <span class="snipcart-items-count"></span> <br/>
+              <span class="snipcart-total-price"></span> */}
             </div>
 
             <div className=" pt-3 pl-6 px-6 LibreBaskerville text-xl">
@@ -240,7 +240,7 @@ export default function Home({ artistes = [] }) {
                                 escapeHtml={true}
                               />
                               <p>
-                                {artiste.fields.prixOeuvre1 == "0"
+                                {artiste.fields.prixOeuvre1 === "0"
                                   ? "Prix libre"
                                   : artiste.fields.prixOeuvre1 + " euros"}{" "}
                               </p>
@@ -337,7 +337,7 @@ export default function Home({ artistes = [] }) {
                                 escapeHtml={true}
                               />
                               <p>
-                                {artiste.fields.prixOeuvre2 == "0"
+                                {artiste.fields.prixOeuvre2 === "0"
                                   ? "Prix libre"
                                   : artiste.fields.prixOeuvre2 + " euros"}{" "}
                               </p>
