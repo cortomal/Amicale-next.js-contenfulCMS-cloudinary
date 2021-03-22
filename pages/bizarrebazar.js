@@ -73,8 +73,8 @@ export default function Home({ artistes = [] }) {
               <button className=" snipcart-checkout px-6 text-xl no-underline hover:underline">
                 Panier
               </button>
-              {/* <span class="snipcart-items-count"></span>
-              <span class="snipcart-total-price"></span> */}
+              <span class="snipcart-items-count"></span> <br/>
+              <span class="snipcart-total-price"></span>
             </div>
 
             <div className=" pt-3 pl-6 px-6 LibreBaskerville text-xl">
