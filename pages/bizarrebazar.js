@@ -274,7 +274,7 @@ export default function Home({ artistes = [] }) {
                                     data-item-url="/bizarrebazar"
                                     data-item-name={artiste.fields.titreOeuvre1}
                                     data-item-custom1-name="Prix libre / Faire un don :"
-                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                     data-item-weight={
                                       typeof artiste.fields.poidsOeuvre1 ==
                                       undefined
@@ -351,7 +351,7 @@ export default function Home({ artistes = [] }) {
                                     data-item-url="/bizarrebazar"
                                     data-item-name={artiste.fields.titreOeuvre2}
                                     data-item-custom1-name="Prix libre / Faire un don :"
-                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                     data-item-custom2-name="Taille"
                                     data-item-custom2-options="S|M|L"
                                     data-item-weight={
@@ -371,7 +371,7 @@ export default function Home({ artistes = [] }) {
                                     data-item-url="/bizarrebazar"
                                     data-item-name={artiste.fields.titreOeuvre2}
                                     data-item-custom1-name="Prix libre / Faire un don :"
-                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                     data-item-weight={
                                       typeof artiste.fields.poidsOeuvre2 ==
                                       undefined
@@ -447,7 +447,7 @@ export default function Home({ artistes = [] }) {
                                   data-item-url="/bizarrebazar"
                                   data-item-name={artiste.fields.titreOeuvre3}
                                   data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                   data-item-weight={
                                     typeof artiste.fields.poidsOeuvre3 ==
                                     undefined
@@ -521,7 +521,7 @@ export default function Home({ artistes = [] }) {
                                   data-item-url="/bizarrebazar"
                                   data-item-name={artiste.fields.titreOeuvre4}
                                   data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                   data-item-weight={
                                     typeof artiste.fields.poidsOeuvre4 ==
                                     undefined
@@ -595,7 +595,7 @@ export default function Home({ artistes = [] }) {
                                   data-item-url="/bizarrebazar"
                                   data-item-name={artiste.fields.titreOeuvre5}
                                   data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                   data-item-weight={
                                     typeof artiste.fields.poidsOeuvre5 ==
                                     undefined
@@ -669,7 +669,7 @@ export default function Home({ artistes = [] }) {
                                   data-item-url="/bizarrebazar"
                                   data-item-name={artiste.fields.titreOeuvre6}
                                   data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                   data-item-weight={
                                     typeof artiste.fields.poidsOeuvre6 ==
                                     undefined
@@ -743,7 +743,7 @@ export default function Home({ artistes = [] }) {
                                   data-item-url="/bizarrebazar"
                                   data-item-name={artiste.fields.titreOeuvre7}
                                   data-item-custom1-name="Prix libre / Faire un don :"
-                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                   data-item-weight={
                                     typeof artiste.fields.poidsOeuvre7 ==
                                     undefined
