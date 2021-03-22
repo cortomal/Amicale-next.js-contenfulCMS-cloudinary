@@ -237,7 +237,7 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre1}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre1} euros</p>
+                              <p>{artiste.fields.prixOeuvre1 == '0'? "Prix libre" : artiste.fields.prixOeuvre1 + ' euros' } </p>
 
                               {!artiste.fields.oeuvre1Vendue ? (
                                 artiste.fields.tShirt1 ? (
@@ -330,7 +330,7 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre2}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre2} euros</p>
+                              <p>{artiste.fields.prixOeuvre2 == '0'? "Prix libre" : artiste.fields.prixOeuvre2 + ' euros' } </p>
 
                               {!artiste.fields.oeuvre2Vendue ? (
                                 artiste.fields.tShirt2 ? (
@@ -423,7 +423,7 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre3}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre3} euros</p>
+                             <p>{artiste.fields.prixOeuvre3 == '0'? "Prix libre" : artiste.fields.prixOeuvre3 + ' euros' } </p>
 
                               {!artiste.fields.oeuvre3Vendue ? (
                                 <button
@@ -493,7 +493,7 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre4}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre4} euros</p>
+                              <p>{artiste.fields.prixOeuvre4 == '0'? "Prix libre" : artiste.fields.prixOeuvre4 + ' euros' } </p>
 
                               {!artiste.fields.oeuvre4Vendue ? (
                                 <button
@@ -563,7 +563,7 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre5}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre5} euros</p>
+                             <p>{artiste.fields.prixOeuvre5 == '0'? "Prix libre" : artiste.fields.prixOeuvre5 + ' euros' } </p>
 
                               {!artiste.fields.oeuvre5Vendue ? (
                                 <button
@@ -631,7 +631,7 @@ export default function Home({ artistes = [] }) {
                             source={artiste.fields.descriptionOeuvre6}
                             escapeHtml={true}
                           />
-                          <p>{artiste.fields.prixOeuvre6} euros</p>
+                          <p>{artiste.fields.prixOeuvre6 == '0'? "Prix libre" : artiste.fields.prixOeuvre6 + ' euros' } </p>
 
                           {!artiste.fields.oeuvre6Vendue ? (
                             <button
@@ -698,7 +698,7 @@ export default function Home({ artistes = [] }) {
                             source={artiste.fields.descriptionOeuvre7}
                             escapeHtml={true}
                           />
-                          <p>{artiste.fields.prixOeuvre7} euros</p>
+                          <p>{artiste.fields.prixOeuvre7 == '0'? "Prix libre" : artiste.fields.prixOeuvre7 + ' euros' } </p>
 
                           {!artiste.fields.oeuvre7Vendue ? (
                             <button
