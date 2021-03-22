@@ -33,7 +33,7 @@ export default function Home({ artistes = [] }) {
 
           <div
             id="snipcart"
-            data-config-modal-style="side"
+            // data-config-modal-style="side"
             data-api-key={process.env.SNIPCART_DATA_API_KEY}
             hidden
           ></div>
@@ -70,9 +70,11 @@ export default function Home({ artistes = [] }) {
               </div>
             </div>
             <div className="flex flex-row-reverse">
-              <button className=" snipcart-checkout px-6 text-xl">
+              <button className=" snipcart-checkout px-6 text-xl no-underline hover:underline">
                 Panier
               </button>
+              {/* <span class="snipcart-items-count"></span>
+              <span class="snipcart-total-price"></span> */}
             </div>
 
             <div className=" pt-3 pl-6 px-6 LibreBaskerville text-xl">
@@ -237,18 +239,22 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre1}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre1 == '0'? "Prix libre" : artiste.fields.prixOeuvre1 + ' euros' } </p>
+                              <p>
+                                {artiste.fields.prixOeuvre1 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre1 + " euros"}{" "}
+                              </p>
 
                               {!artiste.fields.oeuvre1Vendue ? (
                                 artiste.fields.tShirt1 ? (
                                   <button
-                                    className="snipcart-add-item"
+                                    className="snipcart-add-item no-underline hover:underline"
                                     data-item-id={artiste.fields.titreOeuvre1}
                                     data-item-price={artiste.fields.prixOeuvre1}
                                     data-item-url="/bizarrebazar"
                                     data-item-name={artiste.fields.titreOeuvre1}
                                     data-item-custom1-name="Prix libre / Faire un don :"
-                                    data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                    data-item-custom1-options="0 euros [+0.00]| 5 euros[+5.00]| 10 euros[+10.00]| 15 euros[+15.00] | 20 euros[+20.00]|50 euros[+50.00]| 100 euros[+100.00]"
                                     data-item-custom2-name="Taille"
                                     data-item-custom2-options="S|M|L"
                                     data-item-weight={
@@ -262,7 +268,7 @@ export default function Home({ artistes = [] }) {
                                   </button>
                                 ) : (
                                   <button
-                                    className="snipcart-add-item"
+                                    className="snipcart-add-item no-underline hover:underline"
                                     data-item-id={artiste.fields.titreOeuvre1}
                                     data-item-price={artiste.fields.prixOeuvre1}
                                     data-item-url="/bizarrebazar"
@@ -330,12 +336,16 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre2}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre2 == '0'? "Prix libre" : artiste.fields.prixOeuvre2 + ' euros' } </p>
+                              <p>
+                                {artiste.fields.prixOeuvre2 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre2 + " euros"}{" "}
+                              </p>
 
                               {!artiste.fields.oeuvre2Vendue ? (
                                 artiste.fields.tShirt2 ? (
                                   <button
-                                    className="snipcart-add-item"
+                                    className="snipcart-add-item no-underline hover:underline"
                                     data-item-id={artiste.fields.titreOeuvre2}
                                     data-item-price={artiste.fields.prixOeuvre2}
                                     data-item-url="/bizarrebazar"
@@ -355,7 +365,7 @@ export default function Home({ artistes = [] }) {
                                   </button>
                                 ) : (
                                   <button
-                                    className="snipcart-add-item"
+                                    className="snipcart-add-item no-underline hover:underline"
                                     data-item-id={artiste.fields.titreOeuvre2}
                                     data-item-price={artiste.fields.prixOeuvre2}
                                     data-item-url="/bizarrebazar"
@@ -423,11 +433,15 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre3}
                                 escapeHtml={true}
                               />
-                             <p>{artiste.fields.prixOeuvre3 == '0'? "Prix libre" : artiste.fields.prixOeuvre3 + ' euros' } </p>
+                              <p>
+                                {artiste.fields.prixOeuvre3 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre3 + " euros"}{" "}
+                              </p>
 
                               {!artiste.fields.oeuvre3Vendue ? (
                                 <button
-                                  className="snipcart-add-item"
+                                  className="snipcart-add-item no-underline hover:underline"
                                   data-item-id={artiste.fields.titreOeuvre3}
                                   data-item-price={artiste.fields.prixOeuvre3}
                                   data-item-url="/bizarrebazar"
@@ -450,7 +464,7 @@ export default function Home({ artistes = [] }) {
                           )}
                         </div>
                       </div>
-                      <div className="inline-block px-3">
+                      <div className="inline-block px-3 ">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden ">
                           {/*  oeuvre 4 */}
 
@@ -493,11 +507,15 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre4}
                                 escapeHtml={true}
                               />
-                              <p>{artiste.fields.prixOeuvre4 == '0'? "Prix libre" : artiste.fields.prixOeuvre4 + ' euros' } </p>
+                              <p>
+                                {artiste.fields.prixOeuvre4 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre4 + " euros"}{" "}
+                              </p>
 
                               {!artiste.fields.oeuvre4Vendue ? (
                                 <button
-                                  className="snipcart-add-item"
+                                  className="snipcart-add-item no-underline hover:underline"
                                   data-item-id={artiste.fields.titreOeuvre4}
                                   data-item-price={artiste.fields.prixOeuvre4}
                                   data-item-url="/bizarrebazar"
@@ -563,11 +581,15 @@ export default function Home({ artistes = [] }) {
                                 source={artiste.fields.descriptionOeuvre5}
                                 escapeHtml={true}
                               />
-                             <p>{artiste.fields.prixOeuvre5 == '0'? "Prix libre" : artiste.fields.prixOeuvre5 + ' euros' } </p>
+                              <p>
+                                {artiste.fields.prixOeuvre5 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre5 + " euros"}{" "}
+                              </p>
 
                               {!artiste.fields.oeuvre5Vendue ? (
                                 <button
-                                  className="snipcart-add-item"
+                                  className="snipcart-add-item no-underline hover:underline"
                                   data-item-id={artiste.fields.titreOeuvre5}
                                   data-item-price={artiste.fields.prixOeuvre5}
                                   data-item-url="/bizarrebazar"
@@ -594,137 +616,150 @@ export default function Home({ artistes = [] }) {
                       {/* oeuvre 6 */}
                       <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden ">
-                      {artiste.fields.titreOeuvre6 && (
-                        <div>
-                          {artiste.fields.illustrationOeuvre6 && (
-                            <Carousel
-                              controls={
-                                artiste.fields.illustrationOeuvre6.length < 2
-                                  ? false
-                                  : true
-                              }
-                              justify-self="center"
-                              align-self="center"
-                              control-prev-icon-color="invert(100%)"
-                              control-next-icon-color="invert(100%)"
-                              indicators={false}
-                              touch={true}
-                              interval={null}
-                            >
-                              {artiste.fields.illustrationOeuvre6.map(
-                                (oeuvre, i) => (
-                                  <Carousel.Item key={i}>
-                                    <img
-                                      src={
-                                        artiste.fields.illustrationOeuvre6[i]
-                                          .url
-                                      }
-                                      className="tailleImage"
-                                    />
-                                  </Carousel.Item>
-                                )
+                          {artiste.fields.titreOeuvre6 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre6 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre6.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre6.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre6[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
                               )}
-                            </Carousel>
-                          )}
-                          <p>{artiste.fields.titreOeuvre6}</p>
-                          <Markdown
-                            source={artiste.fields.descriptionOeuvre6}
-                            escapeHtml={true}
-                          />
-                          <p>{artiste.fields.prixOeuvre6 == '0'? "Prix libre" : artiste.fields.prixOeuvre6 + ' euros' } </p>
+                              <p>{artiste.fields.titreOeuvre6}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre6}
+                                escapeHtml={true}
+                              />
+                              <p>
+                                {artiste.fields.prixOeuvre6 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre6 + " euros"}{" "}
+                              </p>
 
-                          {!artiste.fields.oeuvre6Vendue ? (
-                            <button
-                              className="snipcart-add-item"
-                              data-item-id={artiste.fields.titreOeuvre6}
-                              data-item-price={artiste.fields.prixOeuvre6}
-                              data-item-url="/bizarrebazar"
-                              data-item-name={artiste.fields.titreOeuvre6}
-                              data-item-custom1-name="Prix libre / Faire un don :"
-                              data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                              data-item-weight={
-                                typeof artiste.fields.poidsOeuvre6 == undefined
-                                  ? 0
-                                  : artiste.fields.poidsOeuvre6
-                              }
-                            >
-                              Ajouter au panier
-                            </button>
-                          ) : (
-                            <div>N'est plus disponible...</div>
+                              {!artiste.fields.oeuvre6Vendue ? (
+                                <button
+                                  className="snipcart-add-item no-underline hover:underline"
+                                  data-item-id={artiste.fields.titreOeuvre6}
+                                  data-item-price={artiste.fields.prixOeuvre6}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre6}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre6 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre6
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
+                            </div>
                           )}
                         </div>
-                      )}
-  </div>
                       </div>
 
                       {/* oeuvre 7*/}
- <div className="inline-block px-3">
+                      <div className="inline-block px-3">
                         <div className=" mt-6 taillecontainer max-w-full overflow-hidden ">
-                      {artiste.fields.titreOeuvre7 && (
-                        <div>
-                          {artiste.fields.illustrationOeuvre7 && (
-                            <Carousel
-                              controls={
-                                artiste.fields.illustrationOeuvre7.length < 2
-                                  ? false
-                                  : true
-                              }
-                              justify-self="center"
-                              align-self="center"
-                              control-prev-icon-color="invert(100%)"
-                              control-next-icon-color="invert(100%)"
-                              indicators={false}
-                              touch={true}
-                              interval={null}
-                            >
-                              {artiste.fields.illustrationOeuvre7.map(
-                                (oeuvre, i) => (
-                                  <Carousel.Item key={i}>
-                                    <img
-                                      src={
-                                        artiste.fields.illustrationOeuvre7[i]
-                                          .url
-                                      }
-                                      className="tailleImage"
-                                    />
-                                  </Carousel.Item>
-                                )
+                          {artiste.fields.titreOeuvre7 && (
+                            <div>
+                              {artiste.fields.illustrationOeuvre7 && (
+                                <Carousel
+                                  controls={
+                                    artiste.fields.illustrationOeuvre7.length <
+                                    2
+                                      ? false
+                                      : true
+                                  }
+                                  justify-self="center"
+                                  align-self="center"
+                                  control-prev-icon-color="invert(100%)"
+                                  control-next-icon-color="invert(100%)"
+                                  indicators={false}
+                                  touch={true}
+                                  interval={null}
+                                >
+                                  {artiste.fields.illustrationOeuvre7.map(
+                                    (oeuvre, i) => (
+                                      <Carousel.Item key={i}>
+                                        <img
+                                          src={
+                                            artiste.fields.illustrationOeuvre7[
+                                              i
+                                            ].url
+                                          }
+                                          className="tailleImage"
+                                        />
+                                      </Carousel.Item>
+                                    )
+                                  )}
+                                </Carousel>
                               )}
-                            </Carousel>
-                          )}
-                          <p>{artiste.fields.titreOeuvre7}</p>
-                          <Markdown
-                            source={artiste.fields.descriptionOeuvre7}
-                            escapeHtml={true}
-                          />
-                          <p>{artiste.fields.prixOeuvre7 == '0'? "Prix libre" : artiste.fields.prixOeuvre7 + ' euros' } </p>
+                              <p>{artiste.fields.titreOeuvre7}</p>
+                              <Markdown
+                                source={artiste.fields.descriptionOeuvre7}
+                                escapeHtml={true}
+                              />
+                              <p>
+                                {artiste.fields.prixOeuvre7 == "0"
+                                  ? "Prix libre"
+                                  : artiste.fields.prixOeuvre7 + " euros"}{" "}
+                              </p>
 
-                          {!artiste.fields.oeuvre7Vendue ? (
-                            <button
-                              className="snipcart-add-item"
-                              data-item-id={artiste.fields.titreOeuvre7}
-                              data-item-price={artiste.fields.prixOeuvre7}
-                              data-item-url="/bizarrebazar"
-                              data-item-name={artiste.fields.titreOeuvre7}
-                              data-item-custom1-name="Prix libre / Faire un don :"
-                              data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
-                              data-item-weight={
-                                typeof artiste.fields.poidsOeuvre7 == undefined
-                                  ? 0
-                                  : artiste.fields.poidsOeuvre7
-                              }
-                            >
-                              Ajouter au panier
-                            </button>
-                          ) : (
-                            <div>N'est plus disponible...</div>
+                              {!artiste.fields.oeuvre7Vendue ? (
+                                <button
+                                  className="snipcart-add-item no-underline hover:underline"
+                                  data-item-id={artiste.fields.titreOeuvre7}
+                                  data-item-price={artiste.fields.prixOeuvre7}
+                                  data-item-url="/bizarrebazar"
+                                  data-item-name={artiste.fields.titreOeuvre7}
+                                  data-item-custom1-name="Prix libre / Faire un don :"
+                                  data-item-custom1-options="0 euros [+0.00] | 2 euros[+2.00]|5 euros[+5.00]|10 euros[+10.00]|15 euros[+15.00]"
+                                  data-item-weight={
+                                    typeof artiste.fields.poidsOeuvre7 ==
+                                    undefined
+                                      ? 0
+                                      : artiste.fields.poidsOeuvre7
+                                  }
+                                >
+                                  Ajouter au panier
+                                </button>
+                              ) : (
+                                <div>N'est plus disponible...</div>
+                              )}
+                            </div>
                           )}
                         </div>
-                      )}
-  </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
