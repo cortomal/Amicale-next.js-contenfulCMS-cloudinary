@@ -240,7 +240,7 @@ export default function Home({ artistes = [] }) {
                                 escapeHtml={true}
                               />
                               <p>
-                                {artiste.fields.prixOeuvre1 === "0"
+                                {artiste.fields.prixOeuvre1 == "0"
                                   ? "Prix libre"
                                   : artiste.fields.prixOeuvre1 + " euros"}{" "}
                               </p>
@@ -337,7 +337,7 @@ export default function Home({ artistes = [] }) {
                                 escapeHtml={true}
                               />
                               <p>
-                                {artiste.fields.prixOeuvre2 === "0"
+                                {artiste.fields.prixOeuvre2 == "0"
                                   ? "Prix libre"
                                   : artiste.fields.prixOeuvre2 + " euros"}{" "}
                               </p>
