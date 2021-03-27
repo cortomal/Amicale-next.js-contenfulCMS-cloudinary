@@ -1,29 +1,32 @@
-import Head from "next/head";
-import Layout from "./Layout";
 import Markdown from "react-markdown";
-import Carousel from "react-bootstrap/Carousel";
+// import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import KeenSlider from "keen-slider";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import {useMediaQuery} from "../utils/useMediaquery"
 
 export default function Artist(props) {
-  const artiste = props.artiste;
+const artiste = props.artiste;
+let isPageWide = useMediaQuery('(max-width: 768px)')
+
+const slidesPreview = isPageWide ? 1:3 
+
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
-    slidesPerView: 3,
+    slidesPerView: slidesPreview,
     // mode: "free-snap",
-    spacing: 1,
+    spacing: 2,
     loop: true,
-    // slideChanged(s) {
-    //   setCurrentSlide(s.details().relativeSlide)
-    // },
   });
+
+ 
+
+
 
   function ArrowLeft(props) {
     const disabeld = props.disabled ? " arrow--disabled" : "";
@@ -54,7 +57,7 @@ export default function Artist(props) {
   }
 
   return (
-    <div className="border-t border-black pt-3 pl-6 ">
+    <div className="border-t border-black pt-3 pl-6 pr-6 ">
       <div className='mb-3'>
       <div>{artiste.fields.nomDeLartiste}</div>
       <a
@@ -71,7 +74,7 @@ export default function Artist(props) {
 
           {/*oeuvre 1*/}
           {artiste.fields.titreOeuvre1 && (
-            <div className="keen-slider__slide ">
+            <div className="keen-slider__slide  ">
               {artiste.fields.illustrationOeuvre1 && (
                 // <Carousel
                 //   controls={

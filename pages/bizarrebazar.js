@@ -47,7 +47,8 @@ export default function Home({ artistes = [] }, props) {
         </Head>
         <Layout>
           <div>
-            <div className="flex justify-between pt-6">
+            <div className="flex justify-between pt-6 hidden md:inline-flex">
+
               <div className="">
                 <strong className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn ">
                   BIZ
@@ -62,7 +63,7 @@ export default function Home({ artistes = [] }, props) {
                 </strong>
               </div>
 
-              {/* <div className="">
+              <div className="">
                 <span className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn ">
                   BAZ
                 </span>
@@ -74,9 +75,9 @@ export default function Home({ artistes = [] }, props) {
                 <span className="text-9xl px-6 mt-6 arkm motion-safe:animate-fadeIn">
                   R
                 </span>
-              </div> */}
+              </div>
             </div>
-            <div className="flex flex-row-reverse">
+            <div className="flex flex-row-reverse hidden md:inline-flex">
               <button className=" snipcart-checkout px-6 text-xl no-underline hover:underline">
                 Panier
               </button>
@@ -84,8 +85,8 @@ export default function Home({ artistes = [] }, props) {
               <span class="snipcart-total-price"></span> */}
             </div>
 
-            <div className=" pt-3 pl-6 px-6 LibreBaskerville text-xl">
-              <p className="border-t border-black">
+            <div className=" text-sm pt-3 pl-6 px-6 LibreBaskerville md:text-xl">
+              <p className="md:border-t md:border-black">
                 <span className="arkm ">
                   <strong>Bizarre</strong> Bazar{" "}
                 </span>
@@ -185,13 +186,12 @@ export default function Home({ artistes = [] }, props) {
               </p>
               <img
                 src="https://res.cloudinary.com/dbqfcp9vd/image/upload/v1616165428/illustration/compile_ddzfu2.jpg"
-                alt="la casette de la super compil de l'Amicale!"
+                alt="cassette compil de l'Amicale!"
                 className="tailleImage"
               ></img>
             </div>
 
             {artistes.map((artiste, i) => {
-              console.log(artiste);
               return <Artist artiste={artiste} />;
             })}
           </div>
