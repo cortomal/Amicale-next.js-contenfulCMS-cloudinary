@@ -97,6 +97,7 @@ const slidesPreview = isPageWide ? 1:3
                               0
                             ].url.replace("http", "https")}
                             className="tailleImage"
+                            loading="lazy"
                           />
                         </Zoom>
                 //       </Carousel.Item>
@@ -184,6 +185,7 @@ const slidesPreview = isPageWide ? 1:3
                             0
                           ].url.replace("http", "https")}
                           className="tailleImage"
+                          loading="lazy"
                         />
                       </Zoom>
                 //     </Carousel.Item>
@@ -269,6 +271,7 @@ const slidesPreview = isPageWide ? 1:3
                             0
                           ].url.replace("http", "https")}
                           className="tailleImage"
+                          loading="lazy"
                         />
                       </Zoom>
                 //     </Carousel.Item>
@@ -333,6 +336,7 @@ const slidesPreview = isPageWide ? 1:3
                             0
                           ].url.replace("http", "https")}
                           className="tailleImage"
+                          loading="lazy"
                         />
                       </Zoom>
                 //     </Carousel.Item>
@@ -398,6 +402,7 @@ const slidesPreview = isPageWide ? 1:3
                             0
                           ].url.replace("http", "https")}
                           className="tailleImage"
+                          loading="lazy"
                         />
                       </Zoom>
                 //     </Carousel.Item>
@@ -463,6 +468,7 @@ const slidesPreview = isPageWide ? 1:3
                             0
                           ].url.replace("http", "https")}
                           className="tailleImage"
+                          loading="lazy"
                         />
                       </Zoom>
                 //     </Carousel.Item>
@@ -528,6 +534,7 @@ const slidesPreview = isPageWide ? 1:3
                             0
                           ].url.replace("http", "https")}
                           className="tailleImage"
+                          loading="lazy"
                         />
                       </Zoom>
                 //     </Carousel.Item>
