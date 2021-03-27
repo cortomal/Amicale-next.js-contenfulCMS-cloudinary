@@ -20,7 +20,7 @@ const slidesPreview = isPageWide ? 1:3
     initial: 0,
     slidesPerView: slidesPreview,
     // mode: "free-snap",
-    spacing: 2,
+    spacing: 0,
     loop: true,
   });
 

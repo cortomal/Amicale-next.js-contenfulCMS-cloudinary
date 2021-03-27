@@ -34,7 +34,6 @@
 }
 
 
-
 /* page index */
 .srollbar-none{
   scrollbar-width: none;
@@ -64,15 +63,9 @@
   opacity: 10;
 }
 
-
 .tailleImage{
-  height:500px;
-  width :450px
-}
-
-.taillecontainer{
-  height:700px;
-  width :500px
+  height:400px;
+  width :350px
 }
 
 .bgColor{
@@ -159,4 +152,12 @@
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
   opacity: 0%;
+}
+
+@media(min-width: 768px){
+  .tailleImage{
+    height:500px;
+    width :450px
+  }
+  
 }
