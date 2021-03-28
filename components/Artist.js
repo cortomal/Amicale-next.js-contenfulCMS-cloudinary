@@ -12,7 +12,7 @@ export default function Artist(props) {
 const artiste = props.artiste;
 let isPageWide = useMediaQuery('(max-width: 768px)')
 
-const slidesPreview = isPageWide ? 1:3 
+const slidesPreview = isPageWide ? 1:2 
 
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
